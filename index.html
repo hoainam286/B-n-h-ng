@@ -4,15 +4,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Hạt Macca Lâm Đồng Thượng Hạng | 100% Tự Nhiên - Giòn Béo Chuẩn Vị</title>
-  <meta name="description" content="Hạt macca Lâm Đồng sấy nhiệt chuẩn vị, nứt vỏ dễ tách, giòn rụm béo ngậy. Tuyển chọn loại 1 từ thủ phủ đất đỏ Bazan. Đặt hàng Zalo 0334475538 hoặc Shopee." />
+  <meta name="description" content="Hạt macca Lâm Đồng sấy nhiệt chuẩn vị, nứt vỏ dễ tách, giòn rụm béo ngậy. Tuyển chọn từ vùng đất đỏ Bazan Lâm Đồng. Đặt hàng Zalo 0334475538 hoặc Shopee." />
   
   <!-- Favicon -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20%220%22%20100%22%20100%22><text y=%22.9em%22 font-size=%2290%22>🌰</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%200%20100%20100%22><text y=%22.9em%22 font-size=%2290%22>🌰</text></svg>">
 
-  <!-- Google Fonts: Plus Jakarta Sans -->
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Font Awesome 6 Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
@@ -27,20 +27,23 @@
           colors: {
             forest: {
               DEFAULT: '#2D5A27',
-              dark: '#1E3D1A',
-              light: '#3D7935',
+              dark: '#163013',
+              deep: '#0F230D',
+              light: '#3E7B37',
               surface: '#EBF3EA',
+              tint: '#F4F9F3',
             },
             macca: {
               DEFAULT: '#8B5A2B',
-              dark: '#68411D',
-              light: '#B27B44',
-              soft: '#F4ECE4',
+              dark: '#5C3A1A',
+              light: '#B57B45',
+              gold: '#D4A373',
+              soft: '#F5EBE1',
             },
             cream: {
               DEFAULT: '#FDFBF7',
-              muted: '#F5EFE6',
-              border: '#E8DED1',
+              muted: '#F6F0E6',
+              border: '#E6DEC8',
             },
             shopee: {
               DEFAULT: '#EE4D2D',
@@ -53,25 +56,32 @@
           },
           fontFamily: {
             sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
           },
           boxShadow: {
-            'nature': '0 10px 30px -5px rgba(45, 90, 39, 0.12), 0 4px 10px -2px rgba(45, 90, 39, 0.06)',
-            'nature-hover': '0 20px 35px -8px rgba(45, 90, 39, 0.22), 0 8px 16px -4px rgba(45, 90, 39, 0.1)',
-            'floating': '0 12px 30px rgba(0, 0, 0, 0.18)',
+            'nature': '0 14px 40px -10px rgba(22, 48, 19, 0.12), 0 4px 12px -2px rgba(22, 48, 19, 0.05)',
+            'nature-lg': '0 25px 50px -12px rgba(22, 48, 19, 0.20)',
+            'gold-glow': '0 10px 30px -5px rgba(139, 90, 43, 0.25)',
+            'floating': '0 16px 36px rgba(15, 35, 13, 0.22)',
           },
           animation: {
-            'bounce-subtle': 'bounceSubtle 2.5s infinite',
-            'pulse-soft': 'pulseSoft 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-            'spin-slow': 'spin 18s linear infinite',
+            'bounce-subtle': 'bounceSubtle 3s ease-in-out infinite',
+            'float-slow': 'floatSlow 5s ease-in-out infinite',
+            'spin-slow': 'spin 22s linear infinite',
+            'marquee': 'marquee 28s linear infinite',
           },
           keyframes: {
             bounceSubtle: {
               '0%, 100%': { transform: 'translateY(0)' },
-              '50%': { transform: 'translateY(-6px)' },
+              '50%': { transform: 'translateY(-7px)' },
             },
-            pulseSoft: {
-              '0%, 100%': { opacity: '1', transform: 'scale(1)' },
-              '50%': { opacity: '0.85', transform: 'scale(1.05)' },
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0px) rotate(0deg)' },
+              '50%': { transform: 'translateY(-10px) rotate(1deg)' },
+            },
+            marquee: {
+              '0%': { transform: 'translateX(0%)' },
+              '100%': { transform: 'translateX(-50%)' },
             }
           }
         }
@@ -82,110 +92,190 @@
   <style>
     body {
       background-color: #FDFBF7;
-      color: #2D3748;
+      color: #1F2937;
       font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
     }
-    
-    /* Glassmorphism */
+
+    /* Subtle organic background pattern */
+    .bg-organic-mesh {
+      background-color: #FDFBF7;
+      background-image: 
+        radial-gradient(at 12% 15%, rgba(45, 90, 39, 0.07) 0px, transparent 50%),
+        radial-gradient(at 88% 20%, rgba(139, 90, 43, 0.08) 0px, transparent 50%),
+        radial-gradient(at 50% 85%, rgba(212, 163, 115, 0.08) 0px, transparent 50%);
+    }
+
+    /* Glassmorphism Navigation */
     .glass-nav {
-      background: rgba(253, 251, 247, 0.92);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
+      background: rgba(253, 251, 247, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
     }
 
-    /* Custom Scrollbar */
-    ::-webkit-scrollbar {
-      width: 8px;
+    /* Button Shine Effect */
+    .btn-shine {
+      position: relative;
+      overflow: hidden;
     }
-    ::-webkit-scrollbar-track {
-      background: #F5EFE6;
+    .btn-shine::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 100%);
+      transform: rotate(30deg);
+      transition: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
     }
-    ::-webkit-scrollbar-thumb {
-      background: #8B5A2B;
-      border-radius: 4px;
-    }
-    ::-webkit-scrollbar-thumb:hover {
-      background: #2D5A27;
+    .btn-shine:hover::after {
+      left: 130%;
     }
 
-    /* Badge Wave Pulse */
+    /* Scroll Reveal Animation Classes */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+
+    /* Radar Ping for Floating Buttons */
     .radar-ping {
       position: relative;
     }
     .radar-ping::before {
       content: '';
       position: absolute;
-      inset: -4px;
+      inset: -5px;
       border-radius: inherit;
       background: inherit;
-      opacity: 0.5;
-      animation: radar 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+      opacity: 0.55;
+      animation: radar 2.2s cubic-bezier(0, 0, 0.2, 1) infinite;
       z-index: -1;
     }
     @keyframes radar {
       0% { transform: scale(1); opacity: 0.6; }
-      100% { transform: scale(1.4); opacity: 0; }
+      100% { transform: scale(1.45); opacity: 0; }
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 9px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F6F0E6;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #8B5A2B;
+      border-radius: 5px;
+      border: 2px solid #F6F0E6;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #2D5A27;
+    }
+
+    /* Accordion transition */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.35s ease;
+    }
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+    }
+    .faq-item.open .faq-icon {
+      transform: rotate(180deg);
     }
   </style>
 </head>
-<body class="antialiased selection:bg-forest selection:text-white">
+<body class="antialiased bg-organic-mesh selection:bg-forest selection:text-white">
 
-  <!-- ================= TOP NOTIFICATION BAR ================= -->
-  <div class="bg-forest-dark text-white text-xs md:text-sm py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
-    <span class="inline-flex items-center justify-center px-2 py-0.5 rounded-full bg-amber-400 text-forest-dark text-[11px] font-bold uppercase tracking-wider">Ưu Đãi Mùa Mới</span>
-    <span>⚡ Miễn phí vận chuyển toàn quốc cho đơn từ 5kg + Tặng kèm dụng cụ tách vỏ chuyên dụng cao cấp!</span>
+  <!-- ================= TOP ANNOUNCEMENT BAR ================= -->
+  <div class="bg-gradient-to-r from-forest-deep via-forest-dark to-forest-deep text-white text-xs md:text-sm py-2.5 px-4 border-b border-white/10">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-center sm:justify-between gap-2">
+      <div class="flex items-center gap-2">
+        <span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-400 text-forest-deep text-[11px] font-extrabold uppercase tracking-wider shadow-sm">
+          <i class="fa-solid fa-fire text-[10px]"></i> Vụ Mới Lâm Đồng
+        </span>
+        <span class="font-medium text-emerald-50">
+          Miễn phí vận chuyển toàn quốc cho đơn từ <strong class="text-amber-300 underline decoration-amber-300/60 underline-offset-2">5kg</strong> + Tặng kèm dụng cụ tách vỏ!
+        </span>
+      </div>
+      <div class="hidden md:flex items-center gap-4 text-xs text-emerald-100/90 font-semibold">
+        <a href="tel:0334475538" class="hover:text-amber-300 transition flex items-center gap-1.5">
+          <i class="fa-solid fa-phone-volume text-amber-300"></i> Hotline: 0334.475.538
+        </a>
+        <span>•</span>
+        <span class="flex items-center gap-1.5">
+          <i class="fa-solid fa-shield-heart text-amber-300"></i> Kiểm tra & ăn thử trước khi thanh toán
+        </span>
+      </div>
+    </div>
   </div>
 
   <!-- ================= 1. HEADER (STICKY NAVIGATION) ================= -->
-  <header class="sticky top-0 z-50 glass-nav border-b border-cream-border transition-all duration-300">
+  <header id="main-header" class="sticky top-0 z-50 glass-nav border-b border-cream-border/80 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         
-        <!-- Logo -->
-        <a href="#hero" class="flex items-center gap-3 group">
-          <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-forest to-forest-dark flex items-center justify-center text-white shadow-nature group-hover:scale-105 transition-transform duration-300">
+        <!-- Brand Logo -->
+        <a href="#hero" class="flex items-center gap-3.5 group">
+          <div class="relative w-12 h-12 rounded-2xl bg-gradient-to-br from-forest via-forest-dark to-forest-deep flex items-center justify-center text-white shadow-nature group-hover:scale-105 transition-transform duration-300 ring-2 ring-amber-400/30">
             <i class="fa-solid fa-seedling text-2xl text-amber-300"></i>
+            <span class="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-macca border-2 border-white flex items-center justify-center text-[8px] text-amber-200">
+              <i class="fa-solid fa-star"></i>
+            </span>
           </div>
           <div>
-            <span class="text-xl md:text-2xl font-extrabold tracking-tight text-forest block leading-none">
+            <span class="font-serif text-xl md:text-2xl font-bold tracking-tight text-forest-dark block leading-none">
               Macca Lâm Đồng
             </span>
-            <span class="text-[11px] font-semibold text-macca tracking-wider uppercase mt-1 block">
-              Tinh Hoa Nông Sản Tây Nguyên
+            <span class="text-[10px] md:text-[11px] font-bold text-macca tracking-[0.16em] uppercase mt-1.5 block">
+              Tinh Hoa Đại Ngàn Tây Nguyên
             </span>
           </div>
         </a>
 
-        <!-- Desktop Navigation -->
-        <nav class="hidden lg:flex items-center gap-8">
-          <a href="#hero" class="font-semibold text-gray-700 hover:text-forest transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-forest after:absolute after:bottom-0 after:left-0 after:transition-all">Trang chủ</a>
-          <a href="#ve-san-pham" class="font-semibold text-gray-700 hover:text-forest transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-forest after:absolute after:bottom-0 after:left-0 after:transition-all">Về sản phẩm</a>
-          <a href="#cong-dung" class="font-semibold text-gray-700 hover:text-forest transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-forest after:absolute after:bottom-0 after:left-0 after:transition-all">Công dụng vàng</a>
-          <a href="#bang-gia" class="font-semibold text-gray-700 hover:text-forest transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-forest after:absolute after:bottom-0 after:left-0 after:transition-all">Bảng giá & Combo</a>
-          <a href="#danh-gia" class="font-semibold text-gray-700 hover:text-forest transition-colors py-1 relative hover:after:w-full after:w-0 after:h-0.5 after:bg-forest after:absolute after:bottom-0 after:left-0 after:transition-all">Đánh giá</a>
+        <!-- Desktop Navigation Links -->
+        <nav class="hidden lg:flex items-center gap-1 xl:gap-2 bg-white/70 px-4 py-1.5 rounded-full border border-cream-border shadow-sm">
+          <a href="#hero" class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-gray-700 hover:text-forest hover:bg-forest-surface/60 transition-all">Trang chủ</a>
+          <a href="#ve-san-pham" class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-gray-700 hover:text-forest hover:bg-forest-surface/60 transition-all">Điểm khác biệt</a>
+          <a href="#cong-dung" class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-gray-700 hover:text-forest hover:bg-forest-surface/60 transition-all">Công dụng</a>
+          <a href="#bang-gia" class="px-3.5 py-1.5 rounded-full text-sm font-bold text-forest bg-forest-surface/80 hover:bg-forest hover:text-white transition-all">Bảng giá</a>
+          <a href="#thu-vien" class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-gray-700 hover:text-forest hover:bg-forest-surface/60 transition-all">Ảnh thực tế</a>
+          <a href="#danh-gia" class="px-3.5 py-1.5 rounded-full text-sm font-semibold text-gray-700 hover:text-forest hover:bg-forest-surface/60 transition-all">Đánh giá</a>
         </nav>
 
-        <!-- Right Action Button -->
-        <div class="hidden sm:flex items-center gap-3">
+        <!-- Right CTA Buttons -->
+        <div class="hidden sm:flex items-center gap-2.5">
           <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" rel="noopener noreferrer" 
-             class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs md:text-sm font-bold bg-[#EE4D2D]/10 text-shopee border border-[#EE4D2D]/30 hover:bg-shopee hover:text-white transition-all duration-300">
+             class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs md:text-sm font-bold bg-shopee/10 text-shopee border border-shopee/25 hover:bg-shopee hover:text-white transition-all duration-300 shadow-sm">
             <i class="fa-solid fa-bag-shopping"></i>
-            <span>Shopee Mall</span>
+            <span>Shopee</span>
           </a>
           <a href="https://zalo.me/0334475538" target="_blank" rel="noopener noreferrer"
-             class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs md:text-sm font-bold bg-zalo hover:bg-zalo-hover text-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
+             class="btn-shine inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs md:text-sm font-bold bg-gradient-to-r from-zalo to-blue-600 hover:from-zalo-hover hover:to-blue-700 text-white shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-0.5">
             <i class="fa-solid fa-comment-dots text-base"></i>
-            <span>Zalo: 0334.475.538</span>
+            <span>Đặt Qua Zalo: 0334.475.538</span>
           </a>
         </div>
 
-        <!-- Mobile Menu Button -->
+        <!-- Mobile Menu Trigger -->
         <div class="flex lg:hidden items-center gap-2">
-          <a href="https://zalo.me/0334475538" target="_blank" class="p-2.5 rounded-xl bg-zalo text-white text-sm font-bold sm:hidden">
-            <i class="fa-solid fa-comment-dots"></i>
+          <a href="https://zalo.me/0334475538" target="_blank" rel="noopener noreferrer"
+             class="px-3 py-2 rounded-xl bg-zalo text-white text-xs font-bold flex items-center gap-1.5 sm:hidden shadow">
+            <i class="fa-solid fa-comment-dots"></i> Zalo
           </a>
-          <button id="mobile-menu-btn" aria-label="Toggle menu" class="p-2.5 rounded-xl text-forest hover:bg-forest-surface transition-colors">
-            <i class="fa-solid fa-bars text-xl"></i>
+          <button id="mobile-menu-btn" aria-label="Mở menu" class="w-10 h-10 rounded-xl bg-forest-surface text-forest flex items-center justify-center hover:bg-forest hover:text-white transition-colors">
+            <i class="fa-solid fa-bars text-lg"></i>
           </button>
         </div>
 
@@ -193,432 +283,562 @@
     </div>
 
     <!-- Mobile Dropdown Menu -->
-    <div id="mobile-menu" class="hidden lg:hidden bg-white border-t border-cream-border px-6 py-6 shadow-xl space-y-4">
-      <a href="#hero" class="block font-semibold text-gray-800 hover:text-forest py-2 border-b border-gray-100">Trang chủ</a>
-      <a href="#ve-san-pham" class="block font-semibold text-gray-800 hover:text-forest py-2 border-b border-gray-100">Về sản phẩm</a>
-      <a href="#cong-dung" class="block font-semibold text-gray-800 hover:text-forest py-2 border-b border-gray-100">Công dụng vàng</a>
-      <a href="#bang-gia" class="block font-semibold text-gray-800 hover:text-forest py-2 border-b border-gray-100">Bảng giá & Combo</a>
-      <a href="#danh-gia" class="block font-semibold text-gray-800 hover:text-forest py-2 border-b border-gray-100">Đánh giá</a>
+    <div id="mobile-menu" class="hidden lg:hidden bg-white/98 backdrop-blur-xl border-t border-cream-border px-6 py-6 shadow-2xl space-y-3">
+      <div class="grid grid-cols-2 gap-2">
+        <a href="#hero" class="px-4 py-2.5 rounded-xl bg-cream text-sm font-semibold text-gray-800 hover:text-forest">🏠 Trang chủ</a>
+        <a href="#ve-san-pham" class="px-4 py-2.5 rounded-xl bg-cream text-sm font-semibold text-gray-800 hover:text-forest">✨ Điểm khác biệt</a>
+        <a href="#cong-dung" class="px-4 py-2.5 rounded-xl bg-cream text-sm font-semibold text-gray-800 hover:text-forest">💚 Công dụng vàng</a>
+        <a href="#bang-gia" class="px-4 py-2.5 rounded-xl bg-forest-surface text-sm font-bold text-forest">🏷️ Bảng giá mới</a>
+        <a href="#thu-vien" class="px-4 py-2.5 rounded-xl bg-cream text-sm font-semibold text-gray-800 hover:text-forest">📸 Ảnh thực tế</a>
+        <a href="#danh-gia" class="px-4 py-2.5 rounded-xl bg-cream text-sm font-semibold text-gray-800 hover:text-forest">⭐ Đánh giá</a>
+      </div>
       
-      <div class="pt-2 grid grid-cols-1 gap-3">
-        <a href="https://zalo.me/0334475538" target="_blank" class="w-full text-center py-3 rounded-xl bg-zalo text-white font-bold flex items-center justify-center gap-2 shadow">
-          <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo: 0334 475 538
+      <div class="pt-3 border-t border-gray-100 grid grid-cols-1 gap-2.5">
+        <a href="https://zalo.me/0334475538" target="_blank" rel="noopener noreferrer"
+           class="w-full text-center py-3.5 rounded-xl bg-zalo text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+          <i class="fa-solid fa-comment-dots"></i> Nhắn Zalo Đặt Hàng: 0334 475 538
         </a>
-        <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" class="w-full text-center py-3 rounded-xl bg-shopee text-white font-bold flex items-center justify-center gap-2 shadow">
-          <i class="fa-solid fa-bag-shopping"></i> Mua ngay trên Shopee
+        <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" rel="noopener noreferrer"
+           class="w-full text-center py-3 rounded-xl bg-shopee text-white font-bold text-sm flex items-center justify-center gap-2 shadow-md">
+          <i class="fa-solid fa-bag-shopping"></i> Mua Ngay Trên Shopee
         </a>
       </div>
     </div>
   </header>
 
   <!-- ================= 2. HERO SECTION ================= -->
-  <section id="hero" class="relative overflow-hidden pt-10 pb-16 md:pt-16 md:pb-24">
-    <!-- Subtle Background Organic Blobs -->
-    <div class="absolute -top-24 -left-24 w-96 h-96 bg-forest-surface/70 rounded-full blur-3xl pointer-events-none -z-10"></div>
-    <div class="absolute top-1/2 -right-24 w-96 h-96 bg-macca-soft/80 rounded-full blur-3xl pointer-events-none -z-10"></div>
+  <section id="hero" class="relative pt-8 pb-16 md:pt-14 md:pb-24 overflow-hidden">
+    <!-- Decorative Ambient Glows -->
+    <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-forest/10 rounded-full blur-[110px] pointer-events-none -z-10"></div>
+    <div class="absolute bottom-0 right-10 w-[450px] h-[450px] bg-macca/15 rounded-full blur-[100px] pointer-events-none -z-10"></div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-10 items-center">
         
-        <!-- Left Content (7 Cols) -->
-        <div class="lg:col-span-7 space-y-6">
+        <!-- Left Column: Copy & CTAs (7 Cols) -->
+        <div class="lg:col-span-7 space-y-6 text-left">
           
-          <!-- Trust Pill -->
-          <div class="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-forest/10 border border-forest/20 text-forest font-semibold text-xs md:text-sm">
-            <span class="w-2.5 h-2.5 rounded-full bg-forest animate-ping"></span>
-            <span>Nông Sản Sạch Lâm Đồng • Thu Hoạch Vụ Mới Nhất</span>
+          <!-- Top Origin Badge -->
+          <div class="inline-flex items-center gap-2.5 pl-2 pr-4 py-1.5 rounded-full bg-white border border-cream-border shadow-sm">
+            <span class="px-2.5 py-0.5 rounded-full bg-forest text-white text-[11px] font-bold uppercase tracking-wider">100% Tự Nhiên</span>
+            <span class="text-xs sm:text-sm font-bold text-forest-dark flex items-center gap-1.5">
+              Đặc Sản Vùng Đất Đỏ Bazan Lâm Đồng
+              <i class="fa-solid fa-circle-check text-emerald-600"></i>
+            </span>
           </div>
 
-          <!-- Main Catchy Title -->
-          <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-gray-900 leading-[1.18] tracking-tight">
-            Hạt Macca Lâm Đồng <br class="hidden sm:inline" />
-            <span class="text-forest relative inline-block">
-              Thượng Hạng
-              <svg class="absolute -bottom-2 left-0 w-full h-3 text-amber-500/40 -z-10" viewBox="0 0 100 12" preserveAspectRatio="none"><path d="M0,8 Q50,0 100,8" stroke="currentColor" stroke-width="6" fill="none"/></svg>
-            </span>
-            <span class="text-macca block mt-2 text-2xl sm:text-3xl md:text-4xl font-bold">
-              Tinh Hoa Đại Ngàn, Giòn Béo Tự Nhiên
-            </span>
-          </h1>
+          <!-- Editorial Luxury Headline -->
+          <div class="space-y-3">
+            <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-forest-deep leading-[1.15] tracking-tight">
+              Hạt Macca Lâm Đồng <br />
+              <span class="italic font-semibold text-macca relative inline-block">
+                Thượng Hạng
+                <svg class="absolute -bottom-1.5 left-0 w-full h-3 text-amber-500/50 -z-10" viewBox="0 0 200 12" preserveAspectRatio="none">
+                  <path d="M2,9 Q100,1 198,8" stroke="currentColor" stroke-width="5" stroke-linecap="round" fill="none"/>
+                </svg>
+              </span>
+            </h1>
+            <p class="text-xl sm:text-2xl md:text-3xl font-extrabold text-forest tracking-tight">
+              Tinh Hoa Đại Ngàn – Giòn Béo Tự Nhiên
+            </p>
+          </div>
 
-          <!-- Description -->
-          <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl font-normal">
-            Thu hoạch <strong>100% từ vùng đất đỏ Bazan Lâm Đồng</strong> màu mỡ. Ứng dụng công nghệ <strong>sấy nhiệt khép kín</strong> giữ trọn dưỡng chất vàng, nứt vỏ tự nhiên dễ tách bóc, tuyệt đối không hôi dầu và không chứa chất bảo quản.
+          <!-- Compelling Description -->
+          <p class="text-base sm:text-lg text-gray-600 leading-relaxed max-w-2xl">
+            Thu hoạch <strong class="text-gray-900">100% từ vùng nguyên liệu Lâm Đồng</strong> trù phú. Ứng dụng công nghệ <strong class="text-gray-900">sấy nhiệt khép kín</strong> giữ trọn vị ngọt bùi nguyên bản, nhân trắng sữa giòn rụm, nứt vỏ tự nhiên dễ tách, tuyệt đối không hôi dầu và không chất bảo quản.
           </p>
 
-          <!-- Core Feature Bullets -->
-          <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1">
-            <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-800">
-              <i class="fa-solid fa-circle-check text-forest text-base"></i>
-              <span>Loại trung (23-27mm) & Size lớn (>27mm)</span>
+          <!-- Highlight Price & Specs Quick Cards -->
+          <div class="grid grid-cols-3 gap-2.5 sm:gap-4 max-w-xl pt-1">
+            <div class="bg-white/90 backdrop-blur p-3 sm:p-3.5 rounded-2xl border border-cream-border shadow-sm hover:border-forest/40 transition">
+              <span class="text-[11px] font-bold uppercase text-gray-400 block">Loại Trung (23-27mm)</span>
+              <span class="text-base sm:text-xl font-black text-forest">125.000đ</span>
+              <span class="text-[11px] text-gray-500 block">1 Bịch 500g</span>
             </div>
-            <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-800">
-              <i class="fa-solid fa-circle-check text-forest text-base"></i>
-              <span>Sấy mẻ mới hàng tuần</span>
+            <div class="bg-forest-surface/90 p-3 sm:p-3.5 rounded-2xl border-2 border-forest shadow-sm relative">
+              <span class="absolute -top-2.5 right-2 bg-amber-400 text-forest-deep text-[9px] font-black px-2 py-0.5 rounded-full uppercase">Bán chạy</span>
+              <span class="text-[11px] font-bold uppercase text-forest block">Combo 2 Bịch (1Kg)</span>
+              <span class="text-base sm:text-xl font-black text-forest-dark">240.000đ</span>
+              <span class="text-[11px] text-forest font-semibold block">Size 23-27mm</span>
             </div>
-            <div class="flex items-center gap-2 text-xs sm:text-sm font-semibold text-gray-800">
-              <i class="fa-solid fa-circle-check text-forest text-base"></i>
-              <span>Freeship toàn quốc từ 5kg</span>
+            <div class="bg-white/90 backdrop-blur p-3 sm:p-3.5 rounded-2xl border border-cream-border shadow-sm hover:border-macca/40 transition">
+              <span class="text-[11px] font-bold uppercase text-macca block">Size Lớn (>27mm)</span>
+              <span class="text-base sm:text-xl font-black text-macca-dark">270.000đ</span>
+              <span class="text-[11px] text-gray-500 block">Gói 1Kg tuyển chọn</span>
             </div>
           </div>
 
-          <!-- 2 Main CTAs -->
-          <div class="pt-4 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+          <!-- 3 Key Feature Pills -->
+          <div class="flex flex-wrap items-center gap-2.5 pt-1">
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-cream-border text-xs font-bold text-gray-700 shadow-sm">
+              <i class="fa-solid fa-fire-burner text-amber-500"></i> Sấy nhiệt mẻ mới hàng tuần
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-white border border-cream-border text-xs font-bold text-gray-700 shadow-sm">
+              <i class="fa-solid fa-key text-macca"></i> Tặng kèm đồ khui vỏ
+            </span>
+            <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-forest-surface border border-forest/20 text-xs font-bold text-forest shadow-sm">
+              <i class="fa-solid fa-truck-fast"></i> Freeship toàn quốc từ 5kg
+            </span>
+          </div>
+
+          <!-- 2 Prominent CTAs -->
+          <div class="pt-3 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
             
-            <!-- Primary CTA: Zalo -->
+            <!-- CTA 1: Zalo Direct Order -->
             <a href="https://zalo.me/0334475538" target="_blank" rel="noopener noreferrer"
-               class="group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-zalo hover:bg-zalo-hover text-white text-base font-bold shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300 transform hover:-translate-y-1">
-              <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <i class="fa-solid fa-comment-dots text-lg"></i>
+               class="btn-shine group relative inline-flex items-center justify-center gap-3.5 px-7 py-4 rounded-2xl bg-gradient-to-r from-zalo to-blue-600 hover:from-zalo-hover hover:to-blue-700 text-white shadow-xl shadow-blue-600/20 hover:shadow-blue-600/35 transition-all duration-300 transform hover:-translate-y-1">
+              <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-comment-dots text-xl"></i>
               </div>
               <div class="text-left">
-                <span class="block text-xs uppercase tracking-wider text-blue-100 font-medium">Tư Vấn & Đặt Hàng Trực Tiếp</span>
-                <span class="text-base sm:text-lg font-extrabold">Nhắn Zalo: 0334 475 538</span>
+                <span class="block text-[11px] uppercase tracking-wider text-blue-100 font-semibold">Tư Vấn & Chốt Đơn Nhanh</span>
+                <span class="text-base sm:text-lg font-extrabold tracking-tight">Nhắn Zalo: 0334 475 538</span>
               </div>
             </a>
 
-            <!-- Secondary CTA: Shopee -->
+            <!-- CTA 2: Shopee Official -->
             <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" rel="noopener noreferrer"
-               class="group inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl bg-shopee hover:bg-shopee-hover text-white text-base font-bold shadow-lg hover:shadow-xl hover:shadow-orange-500/25 transition-all duration-300 transform hover:-translate-y-1">
-              <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
-                <i class="fa-solid fa-bag-shopping text-lg"></i>
+               class="btn-shine group inline-flex items-center justify-center gap-3.5 px-7 py-4 rounded-2xl bg-gradient-to-r from-shopee to-orange-600 hover:from-shopee-hover hover:to-orange-700 text-white shadow-xl shadow-orange-600/20 hover:shadow-orange-600/35 transition-all duration-300 transform hover:-translate-y-1">
+              <div class="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                <i class="fa-solid fa-bag-shopping text-xl"></i>
               </div>
               <div class="text-left">
-                <span class="block text-xs uppercase tracking-wider text-orange-100 font-medium">Gian Hàng Chính Hãng</span>
-                <span class="text-base sm:text-lg font-extrabold">Mua Ngay Trên Shopee</span>
+                <span class="block text-[11px] uppercase tracking-wider text-orange-100 font-semibold">Săn Voucher & Freeship</span>
+                <span class="text-base sm:text-lg font-extrabold tracking-tight">Mua Ngay Trên Shopee</span>
               </div>
             </a>
 
           </div>
 
-          <!-- Social Proof Quick Stats -->
-          <div class="pt-6 border-t border-cream-border flex flex-wrap items-center gap-6 text-sm text-gray-600">
+          <!-- Trust Footer Under Hero -->
+          <div class="pt-4 border-t border-cream-border flex flex-wrap items-center gap-5 text-xs sm:text-sm text-gray-600">
             <div class="flex items-center gap-2">
-              <div class="flex text-amber-400">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+              <div class="flex -space-x-2">
+                <span class="w-7 h-7 rounded-full bg-rose-100 border-2 border-white flex items-center justify-center text-[10px] font-bold text-rose-700">NT</span>
+                <span class="w-7 h-7 rounded-full bg-blue-100 border-2 border-white flex items-center justify-center text-[10px] font-bold text-blue-700">VH</span>
+                <span class="w-7 h-7 rounded-full bg-emerald-100 border-2 border-white flex items-center justify-center text-[10px] font-bold text-emerald-700">ML</span>
+                <span class="w-7 h-7 rounded-full bg-amber-100 border-2 border-white flex items-center justify-center text-[10px] font-bold text-amber-800">+2k</span>
               </div>
-              <span class="font-extrabold text-gray-900">4.9/5</span>
-              <span class="text-xs text-gray-500">(2,800+ đánh giá)</span>
-            </div>
-            <div class="h-4 w-px bg-gray-300 hidden sm:block"></div>
-            <div class="flex items-center gap-1.5 font-medium">
-              <i class="fa-solid fa-shield-halved text-forest"></i>
-              <span>Kiểm tra hàng & ăn thử trước khi trả tiền</span>
+              <div class="flex text-amber-400 text-xs">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <span class="font-bold text-gray-900">4.9/5</span>
+              <span class="text-gray-500">(2,800+ khách tin dùng)</span>
             </div>
           </div>
 
         </div>
 
-        <!-- Right Image Showcase (5 Cols) - Using 1.jpg -->
+        <!-- Right Column: Interactive Showcase with 1.jpg, 2.jpg, 3.jpg (5 Cols) -->
         <div class="lg:col-span-5 relative">
-          
           <div class="relative mx-auto max-w-md lg:max-w-none">
-            <!-- Decorative Backing Ring -->
-            <div class="absolute -inset-3 bg-gradient-to-tr from-forest to-macca rounded-3xl opacity-20 blur-xl"></div>
             
-            <!-- Image Card -->
-            <div class="relative bg-white p-3 rounded-3xl shadow-nature border border-cream-border overflow-hidden group">
-              <div class="overflow-hidden rounded-2xl relative aspect-[4/5] bg-cream-muted">
-                <img src="1.jpg" alt="Hạt Macca Lâm Đồng Thượng Hạng Loại 1" 
-                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out" 
-                     loading="eager" />
+            <!-- Decorative Gold/Forest Frame Backing -->
+            <div class="absolute -inset-3 bg-gradient-to-tr from-forest via-macca-gold to-macca rounded-[2.2rem] opacity-25 blur-xl"></div>
+            
+            <!-- Main Interactive Showcase Card -->
+            <div class="relative bg-white p-3.5 rounded-[2rem] shadow-nature-lg border border-cream-border">
+              <div class="relative aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-cream-muted group cursor-pointer" onclick="openLightbox(document.getElementById('hero-main-img').src, 'Hạt Macca Lâm Đồng Thượng Hạng - Sấy Nhiệt Tự Nhiên')">
+                <img id="hero-main-img" src="1.jpg" alt="Hạt Macca Lâm Đồng Thượng Hạng" 
+                     class="w-full h-full object-cover object-center group-hover:scale-105 transition-all duration-700 ease-out" />
                 
-                <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-60"></div>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-black/15 to-transparent"></div>
                 
-                <!-- Floating Floating VIP Badge -->
-                <div class="absolute top-4 left-4 bg-forest text-white px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide shadow-md flex items-center gap-1.5 border border-white/20">
+                <!-- Top Left Badge -->
+                <div class="absolute top-4 left-4 bg-forest/95 backdrop-blur-md text-white px-3.5 py-1.5 rounded-full text-xs font-bold tracking-wide shadow-lg flex items-center gap-1.5 border border-white/20">
                   <i class="fa-solid fa-award text-amber-300"></i>
-                  <span>100% Tự Nhiên - Loại 1 VIP</span>
+                  <span>100% Tự Nhiên • Lâm Đồng</span>
                 </div>
 
-                <!-- Floating Bottom Caption -->
-                <div class="absolute bottom-4 left-4 right-4 text-white text-left">
-                  <p class="text-xs uppercase tracking-wider text-amber-300 font-semibold">Tuyển Chọn Kỹ Lưỡng</p>
-                  <p class="text-base font-bold drop-shadow">Hạt tròn đều, nứt vỏ tự nhiên, nhân dày trắng sữa</p>
+                <!-- Top Right Zoom Button -->
+                <button type="button" aria-label="Phóng to ảnh" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/40 hover:bg-black/70 backdrop-blur text-white flex items-center justify-center transition">
+                  <i class="fa-solid fa-magnifying-glass-plus text-xs"></i>
+                </button>
+
+                <!-- Bottom Image Caption & Interactive Switcher -->
+                <div class="absolute bottom-4 left-4 right-4 text-white flex items-end justify-between gap-3">
+                  <div>
+                    <span class="inline-block px-2.5 py-0.5 rounded bg-amber-400 text-forest-deep text-[10px] font-extrabold uppercase tracking-wider mb-1">
+                      Ảnh Chụp Thực Tế
+                    </span>
+                    <p id="hero-img-caption" class="text-sm sm:text-base font-bold drop-shadow">
+                      Hạt tròn đều, nứt vỏ tự nhiên, nhân trắng sữa
+                    </p>
+                  </div>
                 </div>
+              </div>
+
+              <!-- Interactive Thumbnail Switcher Bar (1.jpg, 2.jpg, 3.jpg) -->
+              <div class="grid grid-cols-3 gap-2.5 mt-3">
+                <button type="button" onclick="switchHeroImage('1.jpg', 'Hạt tròn đều, nứt vỏ tự nhiên, nhân trắng sữa', this)" 
+                        class="hero-thumb active-thumb relative rounded-xl overflow-hidden aspect-[16/10] border-2 border-forest ring-2 ring-forest/30 transition-all">
+                  <img src="1.jpg" alt="Ảnh sản phẩm 1" class="w-full h-full object-cover" />
+                  <span class="absolute bottom-1 left-1.5 text-[9px] font-bold text-white bg-black/60 px-1.5 rounded">Tổng quan</span>
+                </button>
+                <button type="button" onclick="switchHeroImage('2.jpg', 'Cận cảnh nhân macca sấy nhiệt giòn tan, dày béo', this)" 
+                        class="hero-thumb relative rounded-xl overflow-hidden aspect-[16/10] border-2 border-transparent opacity-75 hover:opacity-100 transition-all">
+                  <img src="2.jpg" alt="Ảnh sản phẩm 2" class="w-full h-full object-cover" />
+                  <span class="absolute bottom-1 left-1.5 text-[9px] font-bold text-white bg-black/60 px-1.5 rounded">Chất lượng hạt</span>
+                </button>
+                <button type="button" onclick="switchHeroImage('3.jpg', 'Combo đóng gói kỹ lưỡng kèm dụng cụ tách vỏ', this)" 
+                        class="hero-thumb relative rounded-xl overflow-hidden aspect-[16/10] border-2 border-transparent opacity-75 hover:opacity-100 transition-all">
+                  <img src="3.jpg" alt="Ảnh sản phẩm 3" class="w-full h-full object-cover" />
+                  <span class="absolute bottom-1 left-1.5 text-[9px] font-bold text-white bg-black/60 px-1.5 rounded">Đóng gói</span>
+                </button>
               </div>
             </div>
 
-            <!-- Floating Stat Bubble 1 -->
-            <div class="absolute -bottom-6 -left-6 bg-white p-3.5 rounded-2xl shadow-floating border border-cream-border flex items-center gap-3 animate-bounce-subtle">
-              <div class="w-11 h-11 rounded-xl bg-forest-surface text-forest flex items-center justify-center font-bold text-lg">
-                <i class="fa-solid fa-gift text-forest"></i>
+            <!-- Floating Badge Left -->
+            <div class="hidden sm:flex absolute -bottom-5 -left-6 bg-white p-3.5 rounded-2xl shadow-floating border border-cream-border items-center gap-3 animate-bounce-subtle">
+              <div class="w-11 h-11 rounded-xl bg-amber-100 text-macca flex items-center justify-center text-lg">
+                <i class="fa-solid fa-thumbs-up"></i>
               </div>
               <div>
-                <p class="text-[11px] text-gray-500 font-semibold uppercase">Quà tặng kèm</p>
-                <p class="text-xs font-bold text-gray-900">Dụng cụ tách vỏ cao cấp</p>
+                <p class="text-[10px] text-gray-500 font-bold uppercase tracking-wider">Cam kết chất lượng</p>
+                <p class="text-xs font-extrabold text-gray-900">Ăn thử trước khi thanh toán</p>
               </div>
             </div>
 
-            <!-- Floating Stat Bubble 2 -->
-            <div class="absolute -top-4 -right-4 bg-white/95 backdrop-blur px-4 py-2.5 rounded-2xl shadow-floating border border-cream-border flex items-center gap-2.5">
-              <span class="flex h-3 w-3 relative">
+            <!-- Floating Badge Right -->
+            <div class="absolute -top-4 -right-3 bg-white/95 backdrop-blur px-4 py-2 rounded-2xl shadow-floating border border-cream-border flex items-center gap-2">
+              <span class="flex h-2.5 w-2.5 relative">
                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
               </span>
-              <p class="text-xs font-bold text-forest">Vừa sấy xong hôm nay</p>
+              <span class="text-xs font-extrabold text-forest">Mẻ sấy nhiệt mới ra lò</span>
             </div>
 
           </div>
-
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- ================= 3. ĐIỂM KHÁC BIỆT (TẠI SAO CHỌN MACCA LÂM ĐỒNG) ================= -->
-  <section id="ve-san-pham" class="py-16 md:py-24 bg-cream-muted/60 relative border-y border-cream-border">
+  <!-- ================= INFINITE TRUST MARQUEE TICKER ================= -->
+  <div class="bg-forest-dark text-amber-200 py-3.5 border-y border-forest-light/30 overflow-hidden select-none">
+    <div class="flex whitespace-nowrap animate-marquee">
+      <div class="flex items-center gap-10 mx-5 text-xs sm:text-sm font-bold uppercase tracking-widest">
+        <span>✦ 100% HẠT MACCA LÂM ĐỒNG THUẦN KHIẾT</span>
+        <span>✦ CÔNG NGHỆ SẤY NHIỆT GIÒN RỤM BÉO NGẬY</span>
+        <span>✦ LOẠI TRUNG (23-27MM): 125K/BỊCH - 240K/2 BỊCH</span>
+        <span>✦ SIZE LỚN (>27MM): 270K/1KG</span>
+        <span>✦ MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC TỪ 5KG</span>
+        <span>✦ BAO ĐỔI TRẢ 1-1 NẾU HẠT HÔI DẦU</span>
+      </div>
+      <div class="flex items-center gap-10 mx-5 text-xs sm:text-sm font-bold uppercase tracking-widest" aria-hidden="true">
+        <span>✦ 100% HẠT MACCA LÂM ĐỒNG THUẦN KHIẾT</span>
+        <span>✦ CÔNG NGHỆ SẤY NHIỆT GIÒN RỤM BÉO NGẬY</span>
+        <span>✦ LOẠI TRUNG (23-27MM): 125K/BỊCH - 240K/2 BỊCH</span>
+        <span>✦ SIZE LỚN (>27MM): 270K/1KG</span>
+        <span>✦ MIỄN PHÍ VẬN CHUYỂN TOÀN QUỐC TỪ 5KG</span>
+        <span>✦ BAO ĐỔI TRẢ 1-1 NẾU HẠT HÔI DẦU</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= 3. ĐIỂM KHÁC BIỆT & SO SÁNH SIZE HẠT ================= -->
+  <section id="ve-san-pham" class="py-16 md:py-24 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Header -->
-      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-forest/10 text-forest text-xs font-bold uppercase tracking-wider">
-          <i class="fa-solid fa-check-double"></i> Chất Lượng Tạo Nên Đẳng Cấp
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest/10 text-forest text-xs font-extrabold uppercase tracking-widest">
+          <i class="fa-solid fa-gem"></i> Giá Trị Khác Biệt Từ Nhà Vườn
         </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
-          Tại Sao Hạt Macca Lâm Đồng Của Chúng Tôi Lại Khác Biệt?
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-forest-deep tracking-tight">
+          Tại Sao Khách Hàng Luôn Chọn Macca Lâm Đồng Của Chúng Tôi?
         </h2>
-        <p class="text-base text-gray-600">
-          Không qua trung gian thương lái, chúng tôi mang tới tận tay bạn từng hạt macca được nâng niu từ thủ phủ cao nguyên với tiêu chuẩn chất lượng khắt khe nhất.
+        <p class="text-base text-gray-600 leading-relaxed">
+          Tuyển chọn trực tiếp từ nhà vườn tại Lâm Đồng không qua thương lái trung gian, giữ trọn độ tươi mới và vị béo bùi tự nhiên trong từng nhân hạt.
         </p>
       </div>
 
-      <!-- Content Split: 4 Standout Cards + Image 2 Showcase -->
+      <!-- 4 Core Differentiators + Image 2 Showcase -->
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         
-        <!-- 4 Value Proposition Cards (7 Cols) -->
-        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-5">
+        <!-- Left 4 Cards (7 Cols) -->
+        <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6">
           
           <!-- Card 1 -->
-          <div class="bg-white p-6 rounded-2xl border border-cream-border shadow-sm hover:shadow-nature hover:border-forest/40 transition-all duration-300 group">
-            <div class="w-12 h-12 rounded-xl bg-forest-surface text-forest flex items-center justify-center text-xl mb-4 group-hover:bg-forest group-hover:text-white transition-colors duration-300">
-              <i class="fa-solid fa-map-location-dot"></i>
+          <div class="reveal bg-white p-7 rounded-3xl border border-cream-border shadow-sm hover:shadow-nature hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-forest-surface/60 rounded-bl-full -z-0 transition-transform group-hover:scale-125"></div>
+            <div class="relative z-10">
+              <div class="w-13 h-13 w-12 h-12 rounded-2xl bg-forest text-amber-300 flex items-center justify-center text-xl mb-5 shadow-md">
+                <i class="fa-solid fa-mountain-sun"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-2 group-hover:text-forest transition-colors">
+                100% Vùng Nguyên Liệu Lâm Đồng
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Thu hoạch từ những vườn macca lâu năm trên vùng đất đỏ Bazan Lâm Đồng – nơi thổ nhưỡng và khí hậu cho ra đời hạt macca có nhân dày, giòn và hàm lượng dinh dưỡng cao nhất.
+              </p>
             </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-forest transition-colors">
-              Nguồn Gốc Xuất Xứ 100% Lâm Đồng
-            </h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-              Tuyển chọn độc quyền từ những vườn macca lâu năm tại vùng đất đỏ Bazan Lâm Đồng trù phú – nơi có khí hậu lý tưởng nhất Việt Nam cho hạt macca đạt hàm lượng dinh dưỡng cao nhất.
-            </p>
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-white p-6 rounded-2xl border border-cream-border shadow-sm hover:shadow-nature hover:border-forest/40 transition-all duration-300 group">
-            <div class="w-12 h-12 rounded-xl bg-macca-soft text-macca flex items-center justify-center text-xl mb-4 group-hover:bg-macca group-hover:text-white transition-colors duration-300">
-              <i class="fa-solid fa-cubes-stacked"></i>
+          <div class="reveal reveal-delay-1 bg-white p-7 rounded-3xl border border-cream-border shadow-sm hover:shadow-nature hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-macca-soft/60 rounded-bl-full -z-0 transition-transform group-hover:scale-125"></div>
+            <div class="relative z-10">
+              <div class="w-12 h-12 rounded-2xl bg-macca text-amber-200 flex items-center justify-center text-xl mb-5 shadow-md">
+                <i class="fa-solid fa-ruler-combined"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-2 group-hover:text-macca transition-colors">
+                Phân Loại Size Rõ Ràng, Chuẩn Xác
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Sàng lọc kỹ lưỡng 2 phân khúc: <strong>Loại trung (23-27mm)</strong> vừa vặn tiết kiệm và <strong>Size lớn (>27mm)</strong> hạt to nhân đầy đặn. Tất cả đều nứt sẵn rãnh kèm dụng cụ khui nhẹ tay.
+              </p>
             </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-forest transition-colors">
-              Đủ Size Hạt Chuẩn, Nứt Sẵn Vỏ
-            </h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-              Tuyển chọn kỹ càng: <strong>Loại trung (23-27mm)</strong> giòn thơm béo ngậy và <strong>Size lớn (>27mm)</strong> hạt to dày nhân. Hạt nứt vỏ tự nhiên, kèm sẵn dụng cụ tách vỏ chuyên dụng bóc nhẹ là ra nguyên nhân.
-            </p>
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-white p-6 rounded-2xl border border-cream-border shadow-sm hover:shadow-nature hover:border-forest/40 transition-all duration-300 group">
-            <div class="w-12 h-12 rounded-xl bg-amber-50 text-amber-600 flex items-center justify-center text-xl mb-4 group-hover:bg-amber-600 group-hover:text-white transition-colors duration-300">
-              <i class="fa-solid fa-fire-burner"></i>
+          <div class="reveal reveal-delay-2 bg-white p-7 rounded-3xl border border-cream-border shadow-sm hover:shadow-nature hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-amber-50 rounded-bl-full -z-0 transition-transform group-hover:scale-125"></div>
+            <div class="relative z-10">
+              <div class="w-12 h-12 rounded-2xl bg-amber-600 text-white flex items-center justify-center text-xl mb-5 shadow-md">
+                <i class="fa-solid fa-fire-burner"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-2 group-hover:text-amber-700 transition-colors">
+                Sấy Nhiệt Mới Mỗi Tuần
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Áp dụng quy trình <strong>sấy nhiệt khép kín</strong> chuẩn nhiệt độ, giúp nhân hạt chín vàng giòn rụm, dậy mùi thơm bùi tự nhiên. Không hàng tồn cũ, không hôi dầu – <strong class="text-forest">Cam kết đổi trả 1-1</strong>.
+              </p>
             </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-forest transition-colors">
-              Sấy Nhiệt Mới Mỗi Tuần
-            </h3>
-            <p class="text-sm text-gray-600 leading-relaxed">
-              Áp dụng công nghệ sấy nhiệt khử ẩm hiện đại, hạt luôn thơm lừng, giòn tan tự nhiên. Tuyệt đối nói không với hàng tồn kho hôi dầu hay hạt lép. <strong class="text-forest">Cam kết đổi trả 1-1 ngay lập tức.</strong>
-            </p>
           </div>
 
           <!-- Card 4 -->
-          <div class="bg-white p-6 rounded-2xl border border-cream-border shadow-sm hover:shadow-nature hover:border-forest/40 transition-all duration-300 group">
-            <div class="w-12 h-12 rounded-xl bg-emerald-50 text-emerald-600 flex items-center justify-center text-xl mb-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors duration-300">
-              <i class="fa-solid fa-leaf"></i>
+          <div class="reveal reveal-delay-3 bg-white p-7 rounded-3xl border border-cream-border shadow-sm hover:shadow-nature hover:-translate-y-1 transition-all duration-300 group relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-24 h-24 bg-emerald-50 rounded-bl-full -z-0 transition-transform group-hover:scale-125"></div>
+            <div class="relative z-10">
+              <div class="w-12 h-12 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-xl mb-5 shadow-md">
+                <i class="fa-solid fa-leaf"></i>
+              </div>
+              <h3 class="text-lg font-extrabold text-gray-900 mb-2 group-hover:text-emerald-700 transition-colors">
+                Mộc Tự Nhiên – Không Hóa Chất
+              </h3>
+              <p class="text-sm text-gray-600 leading-relaxed">
+                Hoàn toàn không tẩm ướp hương liệu, không chất tẩy trắng, không chất bảo quản. Giữ nguyên 100% vị ngọt thanh, béo ngậy thuần khiết an toàn cho bà bầu và trẻ nhỏ.
+              </p>
             </div>
-            <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-forest transition-colors">
-              100% Thuần Khiết Tự Nhiên
+          </div>
+
+        </div>
+
+        <!-- Right Showcase with Image 2 (5 Cols) -->
+        <div class="lg:col-span-5 reveal">
+          <div class="relative bg-white p-3.5 rounded-[2rem] shadow-nature-lg border border-cream-border">
+            <div class="relative aspect-[4/5] rounded-[1.5rem] overflow-hidden bg-cream-muted group cursor-pointer" onclick="openLightbox('2.jpg', 'Cận cảnh nhân hạt Macca Lâm Đồng sấy nhiệt giòn rụm')">
+              <img src="2.jpg" alt="Quy trình sấy nhiệt và chất lượng hạt Macca Lâm Đồng" 
+                   class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+              
+              <div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full text-[11px] font-extrabold text-forest shadow">
+                <i class="fa-solid fa-magnifying-glass-plus mr-1"></i> Bấm xem rõ nét
+              </div>
+
+              <div class="absolute bottom-6 left-6 right-6 text-white space-y-2">
+                <span class="inline-block px-3 py-1 bg-amber-400 text-forest-deep text-[11px] font-black uppercase rounded-lg">
+                  Sấy Nhiệt Chuẩn Độ Giòn
+                </span>
+                <h4 class="font-serif text-2xl font-bold">Nhân Trắng Sữa, Giòn Tan Từ Hạt Đầu Tiên</h4>
+                <p class="text-xs text-gray-200 leading-relaxed">
+                  Độ ẩm hạt sau sấy nhiệt đạt chuẩn dưới 1.5%, giúp bảo quản tự nhiên lâu dài mà vẫn giữ nguyên lớp dầu béo quý giá.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Visual Size Comparison Banner -->
+      <div class="mt-16 bg-gradient-to-br from-white via-cream to-macca-soft/50 rounded-3xl p-6 sm:p-10 border border-cream-border shadow-nature reveal">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          <div class="lg:col-span-5 space-y-3">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-macca">Tư Vấn Chọn Size Hạt</span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-forest-deep">
+              Phân Biệt Nhanh 2 Kích Cỡ Hạt Tại Vườn
             </h3>
             <p class="text-sm text-gray-600 leading-relaxed">
-              Không tẩm ướp phụ gia, không muối, không đường, không chất bảo quản hoá học. Giữ trọn vị ngọt thanh, béo bùi nguyên bản tinh túy của loại hạt được mệnh danh là "Nữ Hoàng Các Loại Hạt".
+              Cả 2 size đều có chất lượng nhân thơm béo và độ giòn hoàn toàn tương đương nhau, chỉ khác nhau về kích thước hạt:
             </p>
           </div>
 
-        </div>
-
-        <!-- Image 2 Showcase (5 Cols) -->
-        <div class="lg:col-span-5">
-          <div class="relative bg-white p-3 rounded-3xl shadow-nature border border-cream-border">
-            <div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-cream-muted group">
-              <img src="2.jpg" alt="Quy trình sấy và chất lượng hạt Macca Lâm Đồng giòn rụm" 
-                   class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700" 
-                   loading="lazy" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
-              
-              <div class="absolute bottom-6 left-6 right-6 text-white">
-                <span class="inline-block px-3 py-1 bg-macca text-xs font-bold uppercase rounded-lg mb-2">Quy Trình Chuẩn Sạch</span>
-                <h4 class="text-xl font-bold mb-1">Cận Cảnh Từng Hạt Nhân Giòn Tan</h4>
-                <p class="text-xs text-gray-200">Hạt sau khi sấy giòn đạt độ ẩm tiêu chuẩn dưới 1.5%, giữ trọn độ ngậy và hàm lượng dầu tự nhiên quý giá.</p>
+          <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Size Trung Box -->
+            <div class="bg-white p-5 rounded-2xl border border-cream-border flex items-start gap-4 shadow-sm">
+              <div class="w-12 h-12 rounded-full bg-forest-surface border-2 border-forest flex items-center justify-center flex-shrink-0 font-extrabold text-xs text-forest">
+                23-27
+              </div>
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <h4 class="font-bold text-gray-900 text-sm">Loại Trung (23 - 27mm)</h4>
+                  <span class="text-[10px] font-bold bg-forest-surface text-forest px-2 py-0.5 rounded-full">Tiết kiệm</span>
+                </div>
+                <p class="text-xs text-gray-600">Vừa vặn ăn hàng ngày cho gia đình, vỏ mỏng dễ tách.</p>
+                <p class="text-xs font-extrabold text-forest pt-1">Giá: 125k / 1 bịch • 240k / 2 bịch</p>
               </div>
             </div>
 
-            <!-- Quality Stamp -->
-            <div class="absolute -top-4 -left-4 bg-amber-400 text-forest-dark font-extrabold px-4 py-2 rounded-xl shadow-lg text-xs flex items-center gap-1.5 border border-white">
-              <i class="fa-solid fa-certificate text-base"></i>
-              <span>CHUẨN XUẤT KHẨU</span>
+            <!-- Size Lon Box -->
+            <div class="bg-white p-5 rounded-2xl border border-macca/30 flex items-start gap-4 shadow-sm">
+              <div class="w-14 h-14 rounded-full bg-macca-soft border-2 border-macca flex items-center justify-center flex-shrink-0 font-extrabold text-xs text-macca-dark">
+                >27mm
+              </div>
+              <div class="space-y-1">
+                <div class="flex items-center gap-2">
+                  <h4 class="font-bold text-gray-900 text-sm">Size Lớn (> 27mm)</h4>
+                  <span class="text-[10px] font-bold bg-macca-soft text-macca-dark px-2 py-0.5 rounded-full">Hạt đại</span>
+                </div>
+                <p class="text-xs text-gray-600">Hạt tuyển chọn kích thước lớn, nhân to tròn cắn cực đã miệng.</p>
+                <p class="text-xs font-extrabold text-macca-dark pt-1">Giá: 270.000đ / 1kg</p>
+              </div>
             </div>
           </div>
         </div>
-
       </div>
 
     </div>
   </section>
 
   <!-- ================= 4. GIÁ TRỊ DINH DƯỠNG & CÔNG DỤNG VÀNG ================= -->
-  <section id="cong-dung" class="py-16 md:py-24 relative overflow-hidden">
+  <section id="cong-dung" class="py-16 md:py-24 bg-forest-tint border-y border-cream-border relative overflow-hidden">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Heading -->
-      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-macca/10 text-macca text-xs font-bold uppercase tracking-wider">
-          <i class="fa-solid fa-heart-pulse"></i> Món Quà Sức Khỏe Cho Cả Gia Đình
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-macca/10 text-macca text-xs font-extrabold uppercase tracking-widest">
+          <i class="fa-solid fa-heart-pulse"></i> Dinh Dưỡng Vàng Từ Thiên Nhiên
         </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
-          Giá Trị Dinh Dưỡng & Công Dụng Vàng Của Hạt Macca
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-forest-deep tracking-tight">
+          Lợi Ích Tuyệt Vời Cho Sức Khỏe Cả Gia Đình
         </h2>
         <p class="text-base text-gray-600">
-          Chứa hàm lượng chất béo không bão hòa đơn cao nhất trong các loại hạt dinh dưỡng, cùng hơn 20 loại vitamin, khoáng chất thiết yếu.
+          Được mệnh danh là "Hoàng hậu của các loại hạt khô", macca sở hữu nguồn Omega-3, 6, 7, chất xơ và hơn 20 loại vitamin, khoáng chất thiết yếu.
         </p>
       </div>
 
-      <!-- 3 Primary Beneficiary Pillars -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+      <!-- 3 Beneficiary Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-14">
         
-        <!-- Pillar 1: Mẹ Bầu & Trẻ Nhỏ -->
-        <div class="bg-white rounded-3xl p-8 border border-cream-border shadow-sm hover:shadow-nature transition-all duration-300 relative overflow-hidden flex flex-col justify-between group">
-          <div class="absolute top-0 right-0 w-28 h-28 bg-rose-50 rounded-bl-full -z-0 transition-transform group-hover:scale-110"></div>
+        <!-- Pillar 1 -->
+        <div class="reveal bg-white rounded-3xl p-8 border border-cream-border shadow-sm hover:shadow-nature transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute -top-6 -right-6 w-28 h-28 bg-rose-50 rounded-full group-hover:scale-125 transition-transform"></div>
           <div class="relative z-10 space-y-4">
             <div class="w-14 h-14 rounded-2xl bg-rose-100 text-rose-600 flex items-center justify-center text-2xl shadow-sm">
               <i class="fa-solid fa-baby"></i>
             </div>
-            <h3 class="text-xl font-bold text-gray-900">
-              Cho Mẹ Bầu & Trẻ Nhỏ
-            </h3>
-            <p class="text-sm font-semibold text-rose-600">
-              Nuôi dưỡng trí não & Đề kháng vững vàng
-            </p>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-rose-500">Phát Triển Toàn Diện</span>
+              <h3 class="text-xl font-extrabold text-gray-900 mt-0.5">Mẹ Bầu & Trẻ Nhỏ</h3>
+            </div>
             <ul class="space-y-3 text-sm text-gray-600 pt-2">
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-rose-500 mt-1"></i>
-                <span>Giàu <strong>Axit Folic & Vitamin B nhóm</strong> giúp ngăn ngừa dị tật ống thần kinh ở thai nhi.</span>
+                <i class="fa-solid fa-circle-check text-rose-500 mt-1"></i>
+                <span>Giàu <strong>Omega-3, DHA & Axit Folic</strong> hỗ trợ phát triển trí não thai nhi ngay từ trong bụng mẹ.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-rose-500 mt-1"></i>
-                <span>Cung cấp <strong>Omega-3, 6, 7</strong> dồi dào kích thích não bộ trẻ phát triển thông minh, nhanh nhạy.</span>
+                <i class="fa-solid fa-circle-check text-rose-500 mt-1"></i>
+                <span>Bổ sung khoáng chất thiết yếu giúp bé thông minh, cứng cáp và tăng cường đề kháng tự nhiên.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-rose-500 mt-1"></i>
-                <span>Giảm triệu chứng nghén, hỗ trợ tiêu hóa tốt, bổ sung năng lượng lành mạnh cho mẹ bầu.</span>
+                <i class="fa-solid fa-circle-check text-rose-500 mt-1"></i>
+                <span>Vị bùi béo thanh nhẹ, giảm ốm nghén, lợi sữa cho mẹ sau sinh.</span>
               </li>
             </ul>
           </div>
-          <div class="mt-6 pt-4 border-t border-gray-100 text-xs font-semibold text-gray-500 flex items-center justify-between">
-            <span>Khuyên dùng:</span>
-            <span class="text-rose-600 font-bold">10 - 15 hạt mỗi ngày</span>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold">
+            <span class="text-gray-500">Lượng dùng khuyên nghị:</span>
+            <span class="text-rose-600 bg-rose-50 px-3 py-1 rounded-full">10 - 15 hạt/ngày</span>
           </div>
         </div>
 
-        <!-- Pillar 2: Người Lớn Tuổi & Tim Mạch -->
-        <div class="bg-white rounded-3xl p-8 border border-cream-border shadow-sm hover:shadow-nature transition-all duration-300 relative overflow-hidden flex flex-col justify-between group">
-          <div class="absolute top-0 right-0 w-28 h-28 bg-forest-surface rounded-bl-full -z-0 transition-transform group-hover:scale-110"></div>
+        <!-- Pillar 2 -->
+        <div class="reveal reveal-delay-1 bg-white rounded-3xl p-8 border border-cream-border shadow-sm hover:shadow-nature transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute -top-6 -right-6 w-28 h-28 bg-forest-surface rounded-full group-hover:scale-125 transition-transform"></div>
           <div class="relative z-10 space-y-4">
             <div class="w-14 h-14 rounded-2xl bg-forest-surface text-forest flex items-center justify-center text-2xl shadow-sm">
-              <i class="fa-solid fa-heart-pulse"></i>
+              <i class="fa-solid fa-heart-circle-check"></i>
             </div>
-            <h3 class="text-xl font-bold text-gray-900">
-              Người Lớn Tuổi & Tim Mạch
-            </h3>
-            <p class="text-sm font-semibold text-forest">
-              Bảo vệ trái tim & Ổn định huyết áp
-            </p>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-forest">Sức Khỏe Bền Vững</span>
+              <h3 class="text-xl font-extrabold text-gray-900 mt-0.5">Người Lớn Tuổi & Tim Mạch</h3>
+            </div>
             <ul class="space-y-3 text-sm text-gray-600 pt-2">
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-forest mt-1"></i>
-                <span>Chứa <strong>87% chất béo không bão hòa đơn</strong>, giảm LDL cholesterol xấu, ngăn xơ vữa động mạch.</span>
+                <i class="fa-solid fa-circle-check text-forest mt-1"></i>
+                <span>Hàm lượng <strong>chất béo không bão hòa đơn tới 87%</strong>, giúp giảm Cholesterol xấu và bảo vệ thành mạch.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-forest mt-1"></i>
-                <span>Chỉ số đường huyết (GI) cực thấp, an toàn tuyệt đối và rất tốt cho người có nguy cơ tiểu đường.</span>
+                <i class="fa-solid fa-circle-check text-forest mt-1"></i>
+                <span>Chỉ số đường huyết thấp, hỗ trợ ổn định đường huyết cho người tiểu đường.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-forest mt-1"></i>
-                <span>Hàm lượng Canxi, Magie, Kali cao giúp xương chắc khỏe, phòng ngừa loãng xương tuổi già.</span>
+                <i class="fa-solid fa-circle-check text-forest mt-1"></i>
+                <span>Giàu Canxi, Magie và Photpho giúp hệ xương khớp dẻo dai, ngủ ngon giấc hơn.</span>
               </li>
             </ul>
           </div>
-          <div class="mt-6 pt-4 border-t border-gray-100 text-xs font-semibold text-gray-500 flex items-center justify-between">
-            <span>Khuyên dùng:</span>
-            <span class="text-forest font-bold">10 - 12 hạt mỗi ngày</span>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold">
+            <span class="text-gray-500">Lượng dùng khuyên nghị:</span>
+            <span class="text-forest bg-forest-surface px-3 py-1 rounded-full">10 - 12 hạt/ngày</span>
           </div>
         </div>
 
-        <!-- Pillar 3: Eat Clean & Làm Đẹp -->
-        <div class="bg-white rounded-3xl p-8 border border-cream-border shadow-sm hover:shadow-nature transition-all duration-300 relative overflow-hidden flex flex-col justify-between group">
-          <div class="absolute top-0 right-0 w-28 h-28 bg-amber-50 rounded-bl-full -z-0 transition-transform group-hover:scale-110"></div>
+        <!-- Pillar 3 -->
+        <div class="reveal reveal-delay-2 bg-white rounded-3xl p-8 border border-cream-border shadow-sm hover:shadow-nature transition-all duration-300 flex flex-col justify-between relative overflow-hidden group">
+          <div class="absolute -top-6 -right-6 w-28 h-28 bg-amber-50 rounded-full group-hover:scale-125 transition-transform"></div>
           <div class="relative z-10 space-y-4">
             <div class="w-14 h-14 rounded-2xl bg-amber-100 text-amber-700 flex items-center justify-center text-2xl shadow-sm">
-              <i class="fa-solid fa-wand-magic-sparkles"></i>
+              <i class="fa-solid fa-spa"></i>
             </div>
-            <h3 class="text-xl font-bold text-gray-900">
-              Người Ăn Kiêng, Eat Clean & Phái Đẹp
-            </h3>
-            <p class="text-sm font-semibold text-amber-700">
-              Vóc dáng thon gọn & Làn da căng mịn
-            </p>
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-amber-700">Giữ Dáng & Đẹp Da</span>
+              <h3 class="text-xl font-extrabold text-gray-900 mt-0.5">Eat Clean, Keto & Phái Đẹp</h3>
+            </div>
             <ul class="space-y-3 text-sm text-gray-600 pt-2">
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-amber-600 mt-1"></i>
-                <span>Giàu <strong>axit palmitoleic (Omega-7 quý hiếm)</strong> hỗ trợ đốt cháy mỡ thừa và tái tạo tế bào da.</span>
+                <i class="fa-solid fa-circle-check text-amber-600 mt-1"></i>
+                <span>Giàu <strong>Omega-7 (Axit Palmitoleic)</strong> hỗ trợ chuyển hóa mỡ thừa và duy trì vóc dáng săn chắc.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-amber-600 mt-1"></i>
-                <span>Nguồn chất xơ tự nhiên dồi dào, tạo cảm giác no lâu, cắt cơn thèm ăn hiệu quả trong chế độ Keto/Low-carb.</span>
+                <i class="fa-solid fa-circle-check text-amber-600 mt-1"></i>
+                <span>Hàm lượng chất xơ và protein thực vật cao giúp no lâu, giảm cảm giác thèm ăn vặt.</span>
               </li>
               <li class="flex items-start gap-2.5">
-                <i class="fa-solid fa-check text-amber-600 mt-1"></i>
-                <span>Chống oxy hóa mạnh mẽ với Vitamin E tự nhiên, giúp da căng bóng và mượt mà từ sâu bên trong.</span>
+                <i class="fa-solid fa-circle-check text-amber-600 mt-1"></i>
+                <span>Vitamin E tự nhiên chống oxy hóa mạnh mẽ, nuôi dưỡng làn da sáng khỏe, mịn màng.</span>
               </li>
             </ul>
           </div>
-          <div class="mt-6 pt-4 border-t border-gray-100 text-xs font-semibold text-gray-500 flex items-center justify-between">
-            <span>Khuyên dùng:</span>
-            <span class="text-amber-700 font-bold">Bữa phụ lành mạnh</span>
+          <div class="mt-6 pt-4 border-t border-gray-100 flex items-center justify-between text-xs font-bold">
+            <span class="text-gray-500">Chế độ dinh dưỡng:</span>
+            <span class="text-amber-800 bg-amber-100 px-3 py-1 rounded-full">Bữa phụ Healthy</span>
           </div>
         </div>
 
       </div>
 
-      <!-- Quick Nutrition Stats Bar -->
-      <div class="bg-forest text-white rounded-3xl p-8 sm:p-10 shadow-nature">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center divide-y lg:divide-y-0 lg:divide-x divide-forest-light/40">
+      <!-- Luxury Nutrition Highlights Strip -->
+      <div class="reveal bg-gradient-to-r from-forest-deep via-forest to-forest-dark text-white rounded-3xl p-8 sm:p-10 shadow-nature-lg border border-white/10">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center divide-y lg:divide-y-0 lg:divide-x divide-white/15">
           <div class="pt-4 lg:pt-0">
-            <p class="text-3xl sm:text-4xl font-black text-amber-300">0%</p>
-            <p class="text-xs sm:text-sm uppercase tracking-wider text-forest-surface mt-1 font-semibold">Cholesterol & Đường</p>
+            <p class="font-serif text-3xl sm:text-5xl font-bold text-amber-300">0%</p>
+            <p class="text-xs sm:text-sm uppercase tracking-wider text-emerald-100 mt-2 font-semibold">Cholesterol & Hóa Chất</p>
           </div>
           <div class="pt-4 lg:pt-0">
-            <p class="text-3xl sm:text-4xl font-black text-amber-300">87%</p>
-            <p class="text-xs sm:text-sm uppercase tracking-wider text-forest-surface mt-1 font-semibold">Chất Béo Tốt Tim Mạch</p>
+            <p class="font-serif text-3xl sm:text-5xl font-bold text-amber-300">87%</p>
+            <p class="text-xs sm:text-sm uppercase tracking-wider text-emerald-100 mt-2 font-semibold">Chất Béo Tốt Tim Mạch</p>
           </div>
           <div class="pt-4 lg:pt-0">
-            <p class="text-3xl sm:text-4xl font-black text-amber-300">20+</p>
-            <p class="text-xs sm:text-sm uppercase tracking-wider text-forest-surface mt-1 font-semibold">Vitamin & Khoáng Chất</p>
+            <p class="font-serif text-3xl sm:text-5xl font-bold text-amber-300">20+</p>
+            <p class="text-xs sm:text-sm uppercase tracking-wider text-emerald-100 mt-2 font-semibold">Vitamin & Khoáng Chất</p>
           </div>
           <div class="pt-4 lg:pt-0">
-            <p class="text-3xl sm:text-4xl font-black text-amber-300">100%</p>
-            <p class="text-xs sm:text-sm uppercase tracking-wider text-forest-surface mt-1 font-semibold">Thuần Khiết Đại Ngàn</p>
+            <p class="font-serif text-3xl sm:text-5xl font-bold text-amber-300">100%</p>
+            <p class="text-xs sm:text-sm uppercase tracking-wider text-emerald-100 mt-2 font-semibold">Macca Sạch Lâm Đồng</p>
           </div>
         </div>
       </div>
@@ -626,207 +846,242 @@
     </div>
   </section>
 
-  <!-- ================= 5. DANH MỤC SẢN PHẨM & ĐẶT HÀNG NHANH ================= -->
-  <section id="bang-gia" class="py-16 md:py-24 bg-cream-muted/50 border-t border-cream-border">
+  <!-- ================= 5. BẢNG GIÁ & DANH MỤC ĐẶT HÀNG NHANH ================= -->
+  <section id="bang-gia" class="py-16 md:py-24 relative">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- Section Title -->
-      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-forest/10 text-forest text-xs font-bold uppercase tracking-wider">
-          <i class="fa-solid fa-tag"></i> Bảng Giá Ưu Đãi Mùa Mới
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16 reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest/10 text-forest text-xs font-extrabold uppercase tracking-widest">
+          <i class="fa-solid fa-tags"></i> Bảng Giá Niêm Yết Tận Vườn
         </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
-          Chọn Gói Hạt Macca Phù Hợp Với Bạn
+        <h2 class="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-forest-deep tracking-tight">
+          Chọn Gói Hạt Macca Lâm Đồng Phù Hợp
         </h2>
         <p class="text-base text-gray-600">
-          Được đóng gói kín bằng hộp nắp thiếc hoặc túi zip màng nhôm bảo quản cao cấp, kèm dụng cụ tách vỏ chuyên dụng tiện lợi.
+          Giá gốc trực tiếp từ nhà vườn Lâm Đồng. Chọn số lượng ngay trên thẻ sản phẩm hoặc bấm đặt nhanh qua Zalo / Shopee.
         </p>
       </div>
 
-      <!-- 3 Product Cards -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch">
+      <!-- 3 Luxury Product Cards -->
+      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch">
         
-        <!-- Product 1: 1 Bịch 500g Loại Trung (Uses 1.jpg) -->
-        <div class="bg-white rounded-3xl p-6 border border-cream-border shadow-sm hover:shadow-nature transition-all duration-300 flex flex-col justify-between relative group">
+        <!-- PRODUCT 1: Loại Trung 1 Bịch 500g (125k) -->
+        <div class="reveal bg-white rounded-[2rem] p-6 sm:p-7 border border-cream-border shadow-sm hover:shadow-nature-lg transition-all duration-300 flex flex-col justify-between relative group">
           <div>
-            <!-- Image Frame -->
-            <div class="relative aspect-square rounded-2xl overflow-hidden mb-6 bg-cream-muted">
-              <img src="1.jpg" alt="Hạt Macca Loại Trung Size 23-27mm 1 Bịch 500g" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-3 left-3 bg-gray-900/80 backdrop-blur text-white text-[11px] font-bold px-3 py-1 rounded-full">
+            <!-- Product Image -->
+            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-cream-muted cursor-pointer" onclick="openLightbox('1.jpg', 'Macca Loại Trung (23-27mm) - 1 Bịch 500g - Giá 125.000đ')">
+              <img src="1.jpg" alt="Hạt Macca Loại Trung Size 23-27mm 1 Bịch 500g" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-gray-900/85 backdrop-blur text-white text-xs font-bold px-3.5 py-1 rounded-full">
                 Size Trung (23-27mm)
+              </div>
+              <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur text-gray-800 text-[11px] font-bold px-2.5 py-1 rounded-lg">
+                1 Bịch x 500g
               </div>
             </div>
 
-            <!-- Product Info -->
-            <h3 class="text-xl font-bold text-gray-900 mb-1">
-              Macca Loại Trung – 1 Bịch
-            </h3>
-            <p class="text-xs text-gray-500 mb-4">Quy cách: 1 Bịch/Hộp 500g hạt nứt vỏ + Tặng 1 đồ khui</p>
-
-            <!-- Price -->
-            <div class="flex items-baseline gap-3 mb-4">
-              <span class="text-2xl font-black text-forest">125.000đ</span>
-              <span class="text-sm text-gray-400 line-through">160.000đ</span>
-              <span class="text-xs font-bold text-red-500 bg-red-50 px-2 py-0.5 rounded-full">-22%</span>
+            <!-- Title & Subtitle -->
+            <div class="mb-4">
+              <h3 class="text-xl font-extrabold text-gray-900 group-hover:text-forest transition-colors">
+                Macca Loại Trung – 1 Bịch
+              </h3>
+              <p class="text-xs text-gray-500 mt-1">Quy cách: 1 Bịch 500g hạt nứt vỏ + Tặng kèm 1 đồ khui</p>
             </div>
 
-            <!-- Perks -->
-            <ul class="space-y-2.5 text-xs text-gray-600 mb-6 border-t border-gray-100 pt-4">
-              <li class="flex items-center gap-2">
+            <!-- Price Box -->
+            <div class="bg-cream p-4 rounded-2xl border border-cream-border mb-5 flex items-baseline justify-between">
+              <div>
+                <span class="text-[11px] text-gray-500 font-semibold block">Giá ưu đãi tại vườn:</span>
+                <div class="flex items-baseline gap-2.5">
+                  <span class="text-2xl sm:text-3xl font-black text-forest">125.000đ</span>
+                  <span class="text-xs text-gray-400 line-through">160.000đ</span>
+                </div>
+              </div>
+              <span class="text-xs font-extrabold text-red-600 bg-red-50 px-2.5 py-1 rounded-full border border-red-100">-22%</span>
+            </div>
+
+            <!-- Features List -->
+            <ul class="space-y-2.5 text-xs sm:text-sm text-gray-600 mb-6">
+              <li class="flex items-center gap-2.5">
                 <i class="fa-solid fa-check text-forest"></i>
-                <span>Hạt loại trung <strong>23-27mm</strong> tròn đều giòn béo</span>
+                <span>Size hạt loại trung <strong>23 - 27mm</strong> giòn béo</span>
               </li>
-              <li class="flex items-center gap-2">
+              <li class="flex items-center gap-2.5">
                 <i class="fa-solid fa-check text-forest"></i>
-                <span>Tặng kèm 01 dụng cụ tách vỏ chuyên dụng</span>
+                <span>Sấy nhiệt thơm lừng, nứt vỏ sẵn dễ tách</span>
               </li>
-              <li class="flex items-center gap-2">
+              <li class="flex items-center gap-2.5">
                 <i class="fa-solid fa-check text-forest"></i>
-                <span>Đổi trả 1-1 miễn phí nếu hạt hư/hôi dầu</span>
+                <span>Tặng kèm 01 dụng cụ khui vỏ chuyên dụng</span>
               </li>
-              <li class="flex items-center gap-2 text-forest font-semibold">
-                <i class="fa-solid fa-truck text-forest"></i>
-                <span>Miễn phí vận chuyển từ 5kg</span>
+              <li class="flex items-center gap-2.5 text-forest font-bold">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>Miễn phí vận chuyển toàn quốc từ 5kg</span>
               </li>
             </ul>
           </div>
 
-          <!-- Actions -->
-          <div class="space-y-2.5 pt-2">
+          <!-- Action Buttons -->
+          <div class="space-y-2.5 pt-4 border-t border-gray-100">
             <button onclick="openOrderModal('Macca Loại Trung (23-27mm) - 1 Bịch 500g', 125000)" 
-                    class="w-full py-3 px-4 rounded-xl bg-zalo hover:bg-zalo-hover text-white text-sm font-bold flex items-center justify-center gap-2 shadow-sm transition-all">
+                    class="btn-shine w-full py-3.5 px-4 rounded-xl bg-zalo hover:bg-zalo-hover text-white text-sm font-extrabold flex items-center justify-center gap-2 shadow-md transition-all transform hover:-translate-y-0.5">
               <i class="fa-solid fa-comment-dots"></i>
-              <span>Đặt 1 Bịch Qua Zalo</span>
+              <span>Đặt 1 Bịch (125k) Qua Zalo</span>
             </button>
             <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" rel="noopener noreferrer"
-               class="w-full py-2.5 px-4 rounded-xl bg-shopee/10 hover:bg-shopee text-shopee hover:text-white border border-shopee/20 text-xs font-bold flex items-center justify-center gap-2 transition-all">
+               class="w-full py-2.5 px-4 rounded-xl bg-shopee/10 hover:bg-shopee text-shopee hover:text-white border border-shopee/25 text-xs font-bold flex items-center justify-center gap-2 transition-all">
               <i class="fa-solid fa-bag-shopping"></i>
               <span>Mua Trên Shopee</span>
             </a>
           </div>
         </div>
 
-        <!-- Product 2: Combo 2 Bịch 1Kg Loại Trung (BEST SELLER) (Uses 3.jpg) -->
-        <div class="bg-white rounded-3xl p-6 border-2 border-forest shadow-nature relative flex flex-col justify-between transform md:-translate-y-2 group">
-          <!-- Best Seller Floating Ribbon -->
-          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 to-amber-600 text-white text-xs font-black px-4 py-1.5 rounded-full uppercase tracking-wider shadow-md flex items-center gap-1.5 whitespace-nowrap">
-            <i class="fa-solid fa-crown text-amber-200"></i>
+        <!-- PRODUCT 2: Combo 2 Bịch 1Kg Loại Trung (240k - BEST SELLER) -->
+        <div class="reveal reveal-delay-1 bg-white rounded-[2rem] p-6 sm:p-7 border-2 border-forest shadow-nature-lg relative flex flex-col justify-between lg:-translate-y-3 group">
+          <!-- Best Seller Top Badge -->
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-amber-500 via-amber-500 to-amber-600 text-white text-xs font-black px-5 py-1.5 rounded-full uppercase tracking-wider shadow-lg flex items-center gap-1.5 whitespace-nowrap ring-4 ring-cream">
+            <i class="fa-solid fa-crown text-amber-100"></i>
             <span>Bán Chạy Nhất • Tiết Kiệm Thêm 10k</span>
           </div>
 
           <div>
-            <!-- Image Frame -->
-            <div class="relative aspect-square rounded-2xl overflow-hidden mb-6 bg-cream-muted mt-2">
-              <img src="3.jpg" alt="Combo 2 Bịch 1Kg Macca Loại Trung Size 23-27mm" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-3 left-3 bg-forest text-white text-[11px] font-bold px-3 py-1 rounded-full shadow">
+            <!-- Product Image -->
+            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-cream-muted mt-2 cursor-pointer" onclick="openLightbox('3.jpg', 'Combo 2 Bịch (1Kg) Macca Loại Trung (23-27mm) - Giá 240.000đ')">
+              <img src="3.jpg" alt="Combo 2 Bịch 1Kg Macca Loại Trung Size 23-27mm" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-forest text-white text-xs font-bold px-3.5 py-1 rounded-full shadow">
                 Chỉ 120k / Bịch
+              </div>
+              <div class="absolute bottom-3 right-3 bg-amber-400 text-forest-deep text-[11px] font-extrabold px-2.5 py-1 rounded-lg shadow">
+                2 Bịch x 500g (1Kg)
               </div>
             </div>
 
-            <!-- Product Info -->
-            <h3 class="text-xl font-bold text-gray-900 mb-1 flex items-center justify-between">
-              <span>Combo 2 Bịch (1Kg)</span>
-              <span class="text-xs bg-forest-surface text-forest px-2 py-0.5 rounded-md font-bold">2 x 500g</span>
-            </h3>
-            <p class="text-xs text-gray-500 mb-4">Size loại trung 23-27mm + Tặng kèm 2 dụng cụ tách vỏ</p>
-
-            <!-- Price -->
-            <div class="flex items-baseline gap-3 mb-4">
-              <span class="text-3xl font-black text-forest">240.000đ</span>
-              <span class="text-sm text-gray-400 line-through">320.000đ</span>
-              <span class="text-xs font-bold text-forest bg-forest-surface px-2 py-0.5 rounded-full">Tiết kiệm 80k</span>
+            <!-- Title & Subtitle -->
+            <div class="mb-4">
+              <div class="flex items-center justify-between gap-2">
+                <h3 class="text-xl font-extrabold text-forest-dark">
+                  Combo 2 Bịch (1Kg)
+                </h3>
+                <span class="text-[11px] bg-forest-surface text-forest px-2.5 py-0.5 rounded-full font-extrabold">Khuyên dùng</span>
+              </div>
+              <p class="text-xs text-gray-500 mt-1">Size loại trung (23-27mm) • 2 Bịch 500g + Tặng 2 đồ khui</p>
             </div>
 
-            <!-- Perks -->
-            <ul class="space-y-2.5 text-xs text-gray-700 font-medium mb-6 border-t border-gray-100 pt-4">
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-box text-forest"></i>
-                <span class="font-bold text-forest">2 Bịch 500g chia nhỏ tiện dùng và bảo quản</span>
+            <!-- Price Box -->
+            <div class="bg-forest-surface/70 p-4 rounded-2xl border border-forest/25 mb-5 flex items-baseline justify-between">
+              <div>
+                <span class="text-[11px] text-forest font-bold block">Giá trọn gói 2 bịch (1Kg):</span>
+                <div class="flex items-baseline gap-2.5">
+                  <span class="text-3xl sm:text-4xl font-black text-forest-dark">240.000đ</span>
+                  <span class="text-xs text-gray-400 line-through">320.000đ</span>
+                </div>
+              </div>
+              <span class="text-xs font-extrabold text-forest bg-white px-2.5 py-1 rounded-full shadow-sm">-25%</span>
+            </div>
+
+            <!-- Features List -->
+            <ul class="space-y-2.5 text-xs sm:text-sm text-gray-700 font-medium mb-6">
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-forest"></i>
+                <span><strong>2 Bịch 500g</strong> chia nhỏ tiện sử dụng và bảo quản giòn lâu</span>
               </li>
-              <li class="flex items-center gap-2">
+              <li class="flex items-center gap-2.5">
+                <i class="fa-solid fa-circle-check text-forest"></i>
+                <span>Size hạt loại trung <strong>23 - 27mm</strong> đều tăm tắp</span>
+              </li>
+              <li class="flex items-center gap-2.5">
                 <i class="fa-solid fa-gift text-forest"></i>
-                <span>Tặng kèm 02 dụng cụ tách vỏ hợp kim cao cấp</span>
+                <span>Tặng kèm <strong>02 dụng cụ tách vỏ</strong> chuyên dụng</span>
               </li>
-              <li class="flex items-center gap-2">
-                <i class="fa-solid fa-check text-forest"></i>
-                <span>Được kiểm tra & ăn thử trước khi thanh toán</span>
-              </li>
-              <li class="flex items-center gap-2 text-forest font-semibold">
-                <i class="fa-solid fa-truck-fast text-forest"></i>
+              <li class="flex items-center gap-2.5 text-forest font-bold">
+                <i class="fa-solid fa-truck-fast"></i>
                 <span>Miễn phí giao hàng toàn quốc từ 5kg</span>
               </li>
             </ul>
           </div>
 
-          <!-- Actions -->
-          <div class="space-y-2.5 pt-2">
+          <!-- Action Buttons -->
+          <div class="space-y-2.5 pt-4 border-t border-gray-100">
             <button onclick="openOrderModal('Combo 2 Bịch 1Kg Loại Trung (23-27mm)', 240000)" 
-                    class="w-full py-3.5 px-4 rounded-xl bg-forest hover:bg-forest-light text-white text-sm font-black flex items-center justify-center gap-2 shadow-lg transition-all transform hover:-translate-y-0.5">
+                    class="btn-shine w-full py-4 px-4 rounded-xl bg-gradient-to-r from-forest to-forest-dark hover:from-forest-light hover:to-forest text-white text-sm font-black flex items-center justify-center gap-2 shadow-lg transition-all transform hover:-translate-y-0.5">
               <i class="fa-solid fa-comment-dots text-amber-300 text-base"></i>
               <span>Đặt Combo 2 Bịch (240k) Qua Zalo</span>
             </button>
             <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" rel="noopener noreferrer"
                class="w-full py-2.5 px-4 rounded-xl bg-shopee hover:bg-shopee-hover text-white text-xs font-bold flex items-center justify-center gap-2 shadow-sm transition-all">
               <i class="fa-solid fa-bag-shopping"></i>
-              <span>Mua Ngay Trên Shopee (Freeship Xtra)</span>
+              <span>Mua Ngay Trên Shopee (Săn Voucher)</span>
             </a>
           </div>
         </div>
 
-        <!-- Product 3: Size Lớn (>27mm) 1Kg (Uses 2.jpg) -->
-        <div class="bg-white rounded-3xl p-6 border border-cream-border shadow-sm hover:shadow-nature transition-all duration-300 flex flex-col justify-between relative group">
+        <!-- PRODUCT 3: Macca Size Lớn (>27mm) - 270k/1kg -->
+        <div class="reveal reveal-delay-2 bg-white rounded-[2rem] p-6 sm:p-7 border border-cream-border shadow-sm hover:shadow-nature-lg transition-all duration-300 flex flex-col justify-between relative group">
           <div>
-            <!-- Image Frame -->
-            <div class="relative aspect-square rounded-2xl overflow-hidden mb-6 bg-cream-muted">
-              <img src="2.jpg" alt="Hạt Macca Size Lớn Trên 27mm" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-              <div class="absolute top-3 left-3 bg-macca text-white text-[11px] font-bold px-3 py-1 rounded-full">
+            <!-- Product Image -->
+            <div class="relative aspect-[4/3] rounded-2xl overflow-hidden mb-6 bg-cream-muted cursor-pointer" onclick="openLightbox('2.jpg', 'Macca Size Lớn (>27mm) - Giá 270.000đ/1kg')">
+              <img src="2.jpg" alt="Hạt Macca Size Lớn Trên 27mm 1Kg" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent"></div>
+              <div class="absolute top-3 left-3 bg-macca text-white text-xs font-bold px-3.5 py-1 rounded-full shadow">
                 Size Lớn (>27mm)
+              </div>
+              <div class="absolute bottom-3 right-3 bg-white/90 backdrop-blur text-macca-dark text-[11px] font-bold px-2.5 py-1 rounded-lg">
+                Đơn vị: 1Kg
               </div>
             </div>
 
-            <!-- Product Info -->
-            <h3 class="text-xl font-bold text-gray-900 mb-1">
-              Macca Size Lớn (>27mm)
-            </h3>
-            <p class="text-xs text-gray-500 mb-4">Quy cách: Hộp/Túi 1Kg hạt chọn lọc size lớn (>27mm) + Đồ khui</p>
-
-            <!-- Price -->
-            <div class="flex items-baseline gap-3 mb-4">
-              <span class="text-2xl font-black text-forest">270.000đ<span class="text-sm font-semibold text-gray-500">/1kg</span></span>
-              <span class="text-sm text-gray-400 line-through">350.000đ</span>
-              <span class="text-xs font-bold text-macca bg-macca-soft px-2 py-0.5 rounded-full">-23%</span>
+            <!-- Title & Subtitle -->
+            <div class="mb-4">
+              <h3 class="text-xl font-extrabold text-gray-900 group-hover:text-macca transition-colors">
+                Macca Size Lớn (>27mm)
+              </h3>
+              <p class="text-xs text-gray-500 mt-1">Quy cách: 1Kg hạt tuyển chọn size lớn (>27mm) + Đồ khui</p>
             </div>
 
-            <!-- Perks -->
-            <ul class="space-y-2.5 text-xs text-gray-600 mb-6 border-t border-gray-100 pt-4">
-              <li class="flex items-center gap-2">
+            <!-- Price Box -->
+            <div class="bg-macca-soft/60 p-4 rounded-2xl border border-macca/20 mb-5 flex items-baseline justify-between">
+              <div>
+                <span class="text-[11px] text-macca-dark font-semibold block">Đơn giá 1Kg size lớn:</span>
+                <div class="flex items-baseline gap-2">
+                  <span class="text-2xl sm:text-3xl font-black text-forest">270.000đ<span class="text-xs font-semibold text-gray-500">/1kg</span></span>
+                  <span class="text-xs text-gray-400 line-through">350.000đ</span>
+                </div>
+              </div>
+              <span class="text-xs font-extrabold text-macca-dark bg-white px-2.5 py-1 rounded-full border border-macca/20">-23%</span>
+            </div>
+
+            <!-- Features List -->
+            <ul class="space-y-2.5 text-xs sm:text-sm text-gray-600 mb-6">
+              <li class="flex items-center gap-2.5">
                 <i class="fa-solid fa-check text-forest"></i>
-                <span>Hạt tuyển chọn size lớn <strong>>27mm</strong> nhân to tròn, béo ngậy</span>
+                <span>Hạt chọn lọc <strong>size lớn (>27mm)</strong> nhân to tròn, dày béo</span>
               </li>
-              <li class="flex items-center gap-2">
+              <li class="flex items-center gap-2.5">
                 <i class="fa-solid fa-check text-forest"></i>
-                <span>Hạt nứt vỏ tự nhiên, bóc tách dễ dàng</span>
+                <span>Sấy nhiệt giòn rụm, nứt vỏ tự nhiên dễ tách</span>
               </li>
-              <li class="flex items-center gap-2">
+              <li class="flex items-center gap-2.5">
                 <i class="fa-solid fa-gift text-forest"></i>
                 <span>Tặng kèm dụng cụ tách vỏ chuyên dụng</span>
               </li>
-              <li class="flex items-center gap-2 text-forest font-semibold">
-                <i class="fa-solid fa-truck text-forest"></i>
-                <span>Miễn phí giao hàng từ 5kg</span>
+              <li class="flex items-center gap-2.5 text-forest font-bold">
+                <i class="fa-solid fa-truck-fast"></i>
+                <span>Miễn phí vận chuyển toàn quốc từ 5kg</span>
               </li>
             </ul>
           </div>
 
-          <!-- Actions -->
-          <div class="space-y-2.5 pt-2">
+          <!-- Action Buttons -->
+          <div class="space-y-2.5 pt-4 border-t border-gray-100">
             <button onclick="openOrderModal('Macca Size Lớn (>27mm) - 1Kg', 270000)" 
-                    class="w-full py-3 px-4 rounded-xl bg-zalo hover:bg-zalo-hover text-white text-sm font-bold flex items-center justify-center gap-2 shadow-sm transition-all">
+                    class="btn-shine w-full py-3.5 px-4 rounded-xl bg-zalo hover:bg-zalo-hover text-white text-sm font-extrabold flex items-center justify-center gap-2 shadow-md transition-all transform hover:-translate-y-0.5">
               <i class="fa-solid fa-comment-dots"></i>
               <span>Đặt Size Lớn 1Kg (270k) Qua Zalo</span>
             </button>
             <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" rel="noopener noreferrer"
-               class="w-full py-2.5 px-4 rounded-xl bg-shopee/10 hover:bg-shopee text-shopee hover:text-white border border-shopee/20 text-xs font-bold flex items-center justify-center gap-2 transition-all">
+               class="w-full py-2.5 px-4 rounded-xl bg-shopee/10 hover:bg-shopee text-shopee hover:text-white border border-shopee/25 text-xs font-bold flex items-center justify-center gap-2 transition-all">
               <i class="fa-solid fa-bag-shopping"></i>
               <span>Mua Trên Shopee</span>
             </a>
@@ -835,100 +1090,165 @@
 
       </div>
 
-      <!-- Freeship 5kg Callout Banner -->
-      <div class="mt-12 bg-white rounded-2xl p-5 border border-forest/30 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4 text-center sm:text-left">
-        <div class="flex items-center gap-3.5">
-          <div class="w-12 h-12 rounded-xl bg-forest-surface text-forest flex items-center justify-center text-2xl flex-shrink-0">
-            <i class="fa-solid fa-truck-fast"></i>
+      <!-- Freeship 5kg Highlight Callout -->
+      <div class="reveal mt-12 bg-gradient-to-r from-forest-surface via-white to-forest-surface rounded-3xl p-6 sm:p-8 border-2 border-forest/30 shadow-nature flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex flex-col sm:flex-row items-center text-center sm:text-left gap-4">
+          <div class="w-16 h-16 rounded-2xl bg-forest text-amber-300 flex items-center justify-center text-3xl flex-shrink-0 shadow-md">
+            <i class="fa-solid fa-truck-ramp-box"></i>
           </div>
           <div>
-            <h4 class="font-extrabold text-forest text-base sm:text-lg">Chính Sách Miễn Phí Vận Chuyển Đặc Biệt</h4>
-            <p class="text-xs sm:text-sm text-gray-600">Miễn phí giao hàng tận nhà trên toàn quốc cho tất cả đơn hàng <strong>từ 5kg trở lên</strong>! Hỗ trợ đóng thùng xốp cẩn thận.</p>
+            <span class="inline-block px-2.5 py-0.5 rounded-full bg-forest text-white text-[10px] font-bold uppercase tracking-wider mb-1">Ưu Đãi Vận Chuyển</span>
+            <h4 class="text-lg sm:text-xl font-extrabold text-forest-deep">
+              Miễn Phí Vận Chuyển Toàn Quốc Cho Đơn Từ 5Kg!
+            </h4>
+            <p class="text-xs sm:text-sm text-gray-600 mt-0.5">
+              Gom đơn mua chung cùng bạn bè, người thân đủ từ <strong>5kg trở lên</strong> để được Freeship 100% tận nhà trên toàn quốc.
+            </p>
           </div>
         </div>
-        <a href="https://zalo.me/0334475538" target="_blank" class="px-5 py-2.5 rounded-xl bg-forest hover:bg-forest-light text-white text-xs font-bold whitespace-nowrap shadow transition">
-          Nhắn Zalo Tư Vấn Từ 5kg
-        </a>
+        <button onclick="openOrderModal('Đơn Hàng Từ 5Kg (Freeship Toàn Quốc)', 240000)"
+                class="btn-shine px-6 py-3.5 rounded-2xl bg-forest hover:bg-forest-dark text-white text-xs sm:text-sm font-extrabold whitespace-nowrap shadow-md transition flex items-center gap-2">
+          <i class="fa-solid fa-comments"></i> Đặt Đơn Từ 5Kg Qua Zalo
+        </button>
       </div>
 
     </div>
   </section>
 
-  <!-- ================= 6. CAM KẾT VÀNG & ĐÁNH GIÁ KHÁCH HÀNG (SOCIAL PROOF) ================= -->
+  <!-- ================= THƯ VIỆN ẢNH THỰC TẾ (BENTO GALLERY) ================= -->
+  <section id="thu-vien" class="py-16 md:py-20 bg-cream-muted/60 border-t border-cream-border">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4 reveal">
+        <div>
+          <span class="text-xs font-extrabold uppercase tracking-widest text-macca block mb-2">
+            <i class="fa-solid fa-camera-retro mr-1"></i> Hình Ảnh Thật 100%
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-deep">
+            Cận Cảnh Hạt Macca Lâm Đồng Thực Tế
+          </h2>
+        </div>
+        <p class="text-sm text-gray-600 max-w-md">
+          Bấm vào từng ảnh để phóng to kiểm tra độ mẩy của nhân hạt, đường nứt tự nhiên và quy cách đóng gói.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6 reveal">
+        <!-- Image 1 -->
+        <div class="md:col-span-5 relative group rounded-3xl overflow-hidden aspect-[4/3] md:aspect-auto md:h-96 shadow-sm border border-cream-border cursor-pointer" onclick="openLightbox('1.jpg', 'Hạt Macca Lâm Đồng tuyển chọn, vỏ nâu sáng tự nhiên')">
+          <img src="1.jpg" alt="Ảnh thực tế Hạt Macca Lâm Đồng 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
+          <div class="absolute bottom-5 left-5 right-5 text-white">
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-forest px-2.5 py-0.5 rounded-full">Ảnh Thực Tế 01</span>
+            <h4 class="text-lg font-bold mt-1">Hạt Tròn Đều, Nứt Vỏ Tự Nhiên</h4>
+          </div>
+        </div>
+
+        <!-- Image 2 -->
+        <div class="md:col-span-4 relative group rounded-3xl overflow-hidden aspect-[4/3] md:aspect-auto md:h-96 shadow-sm border border-cream-border cursor-pointer" onclick="openLightbox('2.jpg', 'Nhân macca trắng sữa, sấy nhiệt thơm lừng không hôi dầu')">
+          <img src="2.jpg" alt="Ảnh thực tế Hạt Macca Lâm Đồng 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
+          <div class="absolute bottom-5 left-5 right-5 text-white">
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-macca px-2.5 py-0.5 rounded-full">Ảnh Thực Tế 02</span>
+            <h4 class="text-lg font-bold mt-1">Nhân Trắng Sữa, Sấy Nhiệt Giòn Béo</h4>
+          </div>
+        </div>
+
+        <!-- Image 3 -->
+        <div class="md:col-span-3 relative group rounded-3xl overflow-hidden aspect-[4/3] md:aspect-auto md:h-96 shadow-sm border border-cream-border cursor-pointer" onclick="openLightbox('3.jpg', 'Đóng gói kín đáo giữ trọn độ giòn kèm dụng cụ tách vỏ')">
+          <img src="3.jpg" alt="Ảnh thực tế Hạt Macca Lâm Đồng 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-90"></div>
+          <div class="absolute bottom-5 left-5 right-5 text-white">
+            <span class="text-[10px] font-bold uppercase tracking-wider bg-amber-500 text-forest-deep px-2.5 py-0.5 rounded-full">Ảnh Thực Tế 03</span>
+            <h4 class="text-lg font-bold mt-1">Đóng Gói Kín Đáo, Tiện Lợi</h4>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= 6. CAM KẾT VÀNG, ĐÁNH GIÁ & CÂU HỎI THƯỜNG GẶP ================= -->
   <section id="danh-gia" class="py-16 md:py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
       <!-- 4 Golden Promises Banner -->
-      <div class="bg-gradient-to-r from-forest to-forest-dark text-white rounded-3xl p-8 sm:p-12 shadow-nature mb-20 relative overflow-hidden">
+      <div class="reveal bg-gradient-to-br from-forest-deep via-forest-dark to-forest text-white rounded-[2.2rem] p-8 sm:p-12 shadow-nature-lg mb-20 relative overflow-hidden">
         <div class="absolute -right-10 -bottom-10 opacity-10 text-white text-9xl pointer-events-none">
-          <i class="fa-solid fa-shield-heart"></i>
+          <i class="fa-solid fa-award"></i>
         </div>
         
         <div class="relative z-10 text-center max-w-3xl mx-auto mb-10">
-          <span class="text-amber-300 font-extrabold uppercase text-xs tracking-widest block mb-2">Lời Hứa Từ Nhà Vườn</span>
-          <h3 class="text-2xl sm:text-3xl font-extrabold">4 Cam Kết Vàng Bảo Vệ Quyền Lợi Khách Hàng</h3>
+          <span class="text-amber-300 font-extrabold uppercase text-xs tracking-widest block mb-2">Uy Tín Đặt Lên Hàng Đầu</span>
+          <h3 class="font-serif text-2xl sm:text-4xl font-bold">4 Cam Kết Vàng Bảo Vệ Người Mua</h3>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center">
-          <div class="bg-white/10 backdrop-blur rounded-2xl p-5 border border-white/15">
-            <i class="fa-solid fa-box-open text-3xl text-amber-300 mb-3 block"></i>
-            <h4 class="font-bold text-base mb-1">Kiểm Tra Trước</h4>
-            <p class="text-xs text-gray-200">Được mở bưu phẩm kiểm tra hạt & ăn thử trước khi thanh toán tiền mặt.</p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center relative z-10">
+          <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/15 hover:bg-white/15 transition">
+            <div class="w-12 h-12 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center text-2xl mx-auto mb-4">
+              <i class="fa-solid fa-box-open"></i>
+            </div>
+            <h4 class="font-bold text-base mb-1.5">Kiểm Tra & Ăn Thử</h4>
+            <p class="text-xs text-emerald-100/90 leading-relaxed">Được mở kiện hàng kiểm tra và ăn thử trước khi thanh toán tiền cho shipper.</p>
           </div>
-          <div class="bg-white/10 backdrop-blur rounded-2xl p-5 border border-white/15">
-            <i class="fa-solid fa-arrows-rotate text-3xl text-amber-300 mb-3 block"></i>
-            <h4 class="font-bold text-base mb-1">Đổi Trả 1 - 1</h4>
-            <p class="text-xs text-gray-200">Đổi mới miễn phí ngay nếu phát hiện hạt bị lép, hôi dầu hoặc ẩm ướt.</p>
+          <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/15 hover:bg-white/15 transition">
+            <div class="w-12 h-12 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center text-2xl mx-auto mb-4">
+              <i class="fa-solid fa-rotate"></i>
+            </div>
+            <h4 class="font-bold text-base mb-1.5">Bao Đổi Trả 1 - 1</h4>
+            <p class="text-xs text-emerald-100/90 leading-relaxed">Đổi mới hoàn toàn miễn phí nếu phát hiện hạt bị hôi dầu, mốc hoặc ẩm ỉu.</p>
           </div>
-          <div class="bg-white/10 backdrop-blur rounded-2xl p-5 border border-white/15">
-            <i class="fa-solid fa-tree text-3xl text-amber-300 mb-3 block"></i>
-            <h4 class="font-bold text-base mb-1">100% Lâm Đồng</h4>
-            <p class="text-xs text-gray-200">Chuẩn chỉ nông sản thủ phủ Tây Nguyên, tuyệt đối không trộn hạt nhập tồn.</p>
+          <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/15 hover:bg-white/15 transition">
+            <div class="w-12 h-12 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center text-2xl mx-auto mb-4">
+              <i class="fa-solid fa-seedling"></i>
+            </div>
+            <h4 class="font-bold text-base mb-1.5">100% Lâm Đồng</h4>
+            <p class="text-xs text-emerald-100/90 leading-relaxed">Chuẩn macca vùng nguyên liệu Lâm Đồng sấy nhiệt mới, không pha trộn hàng cũ.</p>
           </div>
-          <div class="bg-white/10 backdrop-blur rounded-2xl p-5 border border-white/15">
-            <i class="fa-solid fa-truck-fast text-3xl text-amber-300 mb-3 block"></i>
-            <h4 class="font-bold text-base mb-1">Giao Nhanh Toàn Quốc</h4>
-            <p class="text-xs text-gray-200">Đóng bọc xốp chống vỡ cẩn thận, nhận hàng trong 1-3 ngày làm việc.</p>
+          <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/15 hover:bg-white/15 transition">
+            <div class="w-12 h-12 rounded-2xl bg-amber-400/20 text-amber-300 flex items-center justify-center text-2xl mx-auto mb-4">
+              <i class="fa-solid fa-truck-fast"></i>
+            </div>
+            <h4 class="font-bold text-base mb-1.5">Freeship Từ 5Kg</h4>
+            <p class="text-xs text-emerald-100/90 leading-relaxed">Miễn phí vận chuyển toàn quốc cho đơn từ 5kg, đóng gói chống sốc kỹ càng.</p>
           </div>
         </div>
       </div>
 
-      <!-- Real Customer Reviews -->
-      <div class="text-center max-w-3xl mx-auto space-y-4 mb-16">
-        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-forest/10 text-forest text-xs font-bold uppercase tracking-wider">
-          <i class="fa-solid fa-comments"></i> Trải Nghiệm Khách Hàng
+      <!-- Customer Reviews Section -->
+      <div class="text-center max-w-3xl mx-auto space-y-4 mb-14 reveal">
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-forest/10 text-forest text-xs font-extrabold uppercase tracking-widest">
+          <i class="fa-solid fa-star text-amber-500"></i> Phản Hồi Chân Thực
         </div>
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight">
-          Hơn 2,800+ Gia Đình Đã Tin Dùng Mỗi Tháng
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-forest-deep">
+          Khách Hàng Nói Gì Về Hạt Macca Lâm Đồng?
         </h2>
-        <p class="text-base text-gray-600">
-          Cảm nhận thực tế từ những khách hàng đã mua và thưởng thức hạt Macca Lâm Đồng.
-        </p>
       </div>
 
-      <!-- Review Cards Grid -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- 3 Review Cards with Product Photos -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-7 mb-20">
         
         <!-- Review 1 -->
-        <div class="bg-white p-6 rounded-3xl border border-cream-border shadow-sm hover:shadow-nature transition-all space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
+        <div class="reveal bg-white p-7 rounded-3xl border border-cream-border shadow-sm hover:shadow-nature transition-all flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <div class="flex text-amber-400 text-sm">
+              <div class="flex text-amber-400 text-sm gap-0.5">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+              <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full flex items-center gap-1">
                 <i class="fa-solid fa-circle-check"></i> Đã mua combo 2 bịch 1kg
               </span>
             </div>
-            <p class="text-sm text-gray-700 italic leading-relaxed">
-              "Mình đang mang bầu tháng thứ 5, mua ăn bữa phụ bổ sung dinh dưỡng cho con. Hạt ở đây to thật sự, nứt vỏ sẵn nên khui rất nhẹ tay. Hạt thơm ngậy, nhân béo tự nhiên không bị ngọt gắt như mấy loại tẩm ướp. Rất ưng ý!"
+            <p class="text-sm text-gray-700 leading-relaxed">
+              "Mình đang bầu tháng thứ 5, mua combo 2 bịch 240k về ăn bữa phụ. Hạt loại trung 23-27mm mà đều đẹp lắm, nứt vỏ sẵn nên dùng đồ khui tách nhẹ là ra nguyên nhân. Sấy nhiệt thơm lừng, giòn rụm không bị ngấy!"
             </p>
-          </div>
-
-          <div class="pt-4 border-t border-gray-100 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-bold text-sm">
-              NT
+            <div class="flex items-center gap-2 pt-1">
+              <img src="1.jpg" alt="Ảnh đánh giá khách hàng 1" class="w-14 h-14 rounded-xl object-cover border border-cream-border cursor-pointer hover:opacity-80" onclick="openLightbox('1.jpg', 'Ảnh thực tế từ khách hàng Chị Ngọc Trâm')" />
+              <img src="3.jpg" alt="Ảnh đánh giá khách hàng 2" class="w-14 h-14 rounded-xl object-cover border border-cream-border cursor-pointer hover:opacity-80" onclick="openLightbox('3.jpg', 'Combo 2 bịch 1kg khách nhận')" />
             </div>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-rose-100 text-rose-600 flex items-center justify-center font-extrabold text-xs">NT</div>
             <div>
               <p class="text-sm font-bold text-gray-900">Chị Ngọc Trâm</p>
               <p class="text-xs text-gray-500">TP. Hồ Chí Minh • Đặt qua Zalo</p>
@@ -937,25 +1257,25 @@
         </div>
 
         <!-- Review 2 -->
-        <div class="bg-white p-6 rounded-3xl border border-cream-border shadow-sm hover:shadow-nature transition-all space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
+        <div class="reveal reveal-delay-1 bg-white p-7 rounded-3xl border border-cream-border shadow-sm hover:shadow-nature transition-all flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <div class="flex text-amber-400 text-sm">
+              <div class="flex text-amber-400 text-sm gap-0.5">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+              <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full flex items-center gap-1">
                 <i class="fa-solid fa-circle-check"></i> Mua qua Shopee
               </span>
             </div>
-            <p class="text-sm text-gray-700 italic leading-relaxed">
-              "Giao hàng nhanh bọc chống sốc siêu kỹ. Mình mua về cho bố mẹ ăn kiêng phòng bệnh tim mạch và huyết áp. Bố mình khen hạt giòn tan, không bị hôi dầu một hạt nào. Lần sau sẽ tiếp tục ủng hộ nông sản quê mình!"
+            <p class="text-sm text-gray-700 leading-relaxed">
+              "Mua cho bố mẹ ăn tốt cho tim mạch. Nhân hạt trắng ngà, sấy nhiệt chín tới nên rất thơm và bùi, đặc biệt là không có hạt nào bị hôi dầu hay mốc. Shop đóng gói cẩn thận, giao hàng rất nhanh."
             </p>
-          </div>
-
-          <div class="pt-4 border-t border-gray-100 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-bold text-sm">
-              VH
+            <div class="flex items-center gap-2 pt-1">
+              <img src="2.jpg" alt="Ảnh đánh giá khách hàng" class="w-14 h-14 rounded-xl object-cover border border-cream-border cursor-pointer hover:opacity-80" onclick="openLightbox('2.jpg', 'Ảnh nhân hạt macca khách chụp')" />
             </div>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center font-extrabold text-xs">VH</div>
             <div>
               <p class="text-sm font-bold text-gray-900">Anh Vũ Hoàng</p>
               <p class="text-xs text-gray-500">Cầu Giấy, Hà Nội</p>
@@ -964,53 +1284,105 @@
         </div>
 
         <!-- Review 3 -->
-        <div class="bg-white p-6 rounded-3xl border border-cream-border shadow-sm hover:shadow-nature transition-all space-y-4 flex flex-col justify-between">
-          <div class="space-y-3">
+        <div class="reveal reveal-delay-2 bg-white p-7 rounded-3xl border border-cream-border shadow-sm hover:shadow-nature transition-all flex flex-col justify-between space-y-5">
+          <div class="space-y-4">
             <div class="flex items-center justify-between">
-              <div class="flex text-amber-400 text-sm">
+              <div class="flex text-amber-400 text-sm gap-0.5">
                 <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               </div>
-              <span class="text-[11px] font-semibold text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full flex items-center gap-1">
+              <span class="text-[11px] font-bold text-emerald-700 bg-emerald-50 px-2.5 py-1 rounded-full flex items-center gap-1">
                 <i class="fa-solid fa-circle-check"></i> Đã mua size lớn (>27mm)
               </span>
             </div>
-            <p class="text-sm text-gray-700 italic leading-relaxed">
-              "Đặt thử 3kg size lớn ăn và chia cho gia đình, hạt ở đây to tròn đều, béo ngậy ăn rất thích. Chủ shop nhiệt tình, nhắn tin Zalo tư vấn cực kỳ chu đáo. Rất đáng đồng tiền bát gạo!"
+            <p class="text-sm text-gray-700 leading-relaxed">
+              "Mình gom cùng mấy chị đồng nghiệp đặt 5kg loại size lớn (>27mm) giá 270k/kg để được miễn phí ship. Hạt to tròn, nhân dày cắn ngập răng cực kỳ chất lượng. Nhắn Zalo 0334475538 chủ vườn tư vấn rất nhiệt tình!"
             </p>
-          </div>
-
-          <div class="pt-4 border-t border-gray-100 flex items-center gap-3">
-            <div class="w-10 h-10 rounded-full bg-forest-surface text-forest flex items-center justify-center font-bold text-sm">
-              ML
+            <div class="flex items-center gap-2 pt-1">
+              <img src="2.jpg" alt="Ảnh đánh giá size lớn" class="w-14 h-14 rounded-xl object-cover border border-cream-border cursor-pointer hover:opacity-80" onclick="openLightbox('2.jpg', 'Hạt size lớn >27mm')" />
+              <img src="1.jpg" alt="Ảnh đánh giá size lớn" class="w-14 h-14 rounded-xl object-cover border border-cream-border cursor-pointer hover:opacity-80" onclick="openLightbox('1.jpg', 'Đơn hàng 5kg Freeship')" />
             </div>
+          </div>
+          <div class="pt-4 border-t border-gray-100 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-full bg-forest-surface text-forest flex items-center justify-center font-extrabold text-xs">ML</div>
             <div>
               <p class="text-sm font-bold text-gray-900">Chị Mai Lan</p>
-              <p class="text-xs text-gray-500">Đà Nẵng</p>
+              <p class="text-xs text-gray-500">Hải Châu, Đà Nẵng</p>
             </div>
           </div>
         </div>
 
       </div>
 
+      <!-- FAQ Accordion Section -->
+      <div class="max-w-3xl mx-auto reveal">
+        <div class="text-center mb-10">
+          <h3 class="font-serif text-2xl sm:text-3xl font-bold text-forest-deep">Câu Hỏi Thường Gặp</h3>
+          <p class="text-sm text-gray-500 mt-1">Giải đáp nhanh những thắc mắc của khách hàng trước khi đặt mua</p>
+        </div>
+
+        <div class="space-y-3">
+          <!-- FAQ 1 -->
+          <div class="faq-item open bg-white rounded-2xl border border-cream-border shadow-sm overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-bold text-gray-900 hover:text-forest transition">
+              <span class="text-sm sm:text-base">1. Hạt macca loại trung (23-27mm) và size lớn (>27mm) khác nhau như thế nào?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-xs text-gray-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer px-6">
+              <p class="text-xs sm:text-sm text-gray-600 pb-5 leading-relaxed">
+                Cả 2 phân loại đều được thu hoạch từ vùng nguyên liệu Lâm Đồng và sấy nhiệt mới mỗi tuần nên độ giòn, vị béo bùi là như nhau. <strong>Loại trung (23-27mm)</strong> có giá tiết kiệm (125k/1 bịch, 240k/2 bịch) rất hợp ăn hàng ngày; còn <strong>Size lớn (>27mm - 270k/1kg)</strong> là những hạt kích cỡ đại được sàng lọc riêng, nhân to tròn dày dặn hơn.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item bg-white rounded-2xl border border-cream-border shadow-sm overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-bold text-gray-900 hover:text-forest transition">
+              <span class="text-sm sm:text-base">2. Chính sách miễn phí vận chuyển từ 5kg áp dụng ra sao?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-xs text-gray-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer px-6">
+              <p class="text-xs sm:text-sm text-gray-600 pb-5 leading-relaxed">
+                Khi quý khách đặt mua tổng khối lượng từ <strong>5kg trở lên</strong> (có thể kết hợp cả loại trung và size lớn), shop sẽ <strong>miễn phí 100% cước vận chuyển</strong> giao tận nơi trên toàn quốc.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item bg-white rounded-2xl border border-cream-border shadow-sm overflow-hidden">
+            <button type="button" onclick="toggleFaq(this)" class="w-full px-6 py-4 text-left flex items-center justify-between gap-4 font-bold text-gray-900 hover:text-forest transition">
+              <span class="text-sm sm:text-base">3. Bảo quản hạt macca như thế nào để giữ độ giòn lâu nhất?</span>
+              <i class="fa-solid fa-chevron-down faq-icon text-xs text-gray-400 transition-transform duration-300"></i>
+            </button>
+            <div class="faq-answer px-6">
+              <p class="text-xs sm:text-sm text-gray-600 pb-5 leading-relaxed">
+                Sau khi mở túi/hộp để sử dụng, bạn chỉ cần kéo kín miệng túi zip hoặc đậy chặt nắp hộp, để ở nơi khô ráo thoáng mát hoặc ngăn mát tủ lạnh. Hạt giữ trọn độ giòn ngon trong 6 - 12 tháng.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- ================= 7. KHU VỰC ĐẶT HÀNG NHANH & FOOTER ================= -->
-  <section class="py-16 md:py-24 bg-cream-muted/80 border-t border-cream-border">
+  <!-- ================= 7. KHU VỰC ĐẶT HÀNG NHANH & THÔNG TIN LIÊN HỆ ================= -->
+  <section id="dat-hang" class="py-16 md:py-24 bg-gradient-to-b from-cream-muted/70 to-cream border-t border-cream-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       
-      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
         
-        <!-- Left: Quick Order Form (7 Cols) -->
-        <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-3xl border border-cream-border shadow-nature">
+        <!-- Left: Smart Quick Order Form (7 Cols) -->
+        <div class="lg:col-span-7 bg-white p-8 sm:p-10 rounded-[2rem] border border-cream-border shadow-nature-lg reveal">
           
-          <div class="space-y-2 mb-8">
-            <span class="text-xs font-bold text-forest uppercase tracking-wider bg-forest-surface px-3 py-1 rounded-full">Đặt Hàng Tiện Lợi</span>
-            <h3 class="text-2xl sm:text-3xl font-extrabold text-gray-900">
-              Form Tạo Đơn Hàng Nhanh
+          <div class="space-y-2 mb-7">
+            <span class="inline-flex items-center gap-1.5 text-xs font-extrabold text-forest uppercase tracking-wider bg-forest-surface px-3.5 py-1 rounded-full">
+              <i class="fa-solid fa-bolt"></i> Đặt Hàng Nhanh Trong 30 Giây
+            </span>
+            <h3 class="font-serif text-2xl sm:text-3xl font-bold text-forest-deep">
+              Tạo Đơn Hàng Nhanh Qua Zalo
             </h3>
             <p class="text-sm text-gray-600">
-              Điền thông tin bên dưới, hệ thống sẽ tự động tổng hợp nội dung và mở Zalo kết nối trực tiếp với nhân viên hỗ trợ ngay lập tức!
+              Chọn sản phẩm và số lượng bên dưới, hệ thống sẽ tự động tính tạm tính và mở Zalo <strong class="text-zalo">0334 475 538</strong> để xác nhận đơn ngay!
             </p>
           </div>
 
@@ -1022,7 +1394,7 @@
                 <div class="relative">
                   <i class="fa-solid fa-user absolute left-4 top-3.5 text-gray-400 text-sm"></i>
                   <input type="text" id="order-name" required placeholder="Nguyễn Văn A" 
-                         class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none transition text-sm text-gray-800" />
+                         class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none transition text-sm text-gray-800 bg-cream/40" />
                 </div>
               </div>
 
@@ -1031,21 +1403,21 @@
                 <div class="relative">
                   <i class="fa-solid fa-phone absolute left-4 top-3.5 text-gray-400 text-sm"></i>
                   <input type="tel" id="order-phone" required placeholder="0901 234 567" 
-                         class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none transition text-sm text-gray-800" />
+                         class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none transition text-sm text-gray-800 bg-cream/40" />
                 </div>
               </div>
             </div>
 
             <div>
-              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Lựa chọn sản phẩm muốn đặt *</label>
+              <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Lựa chọn phân loại sản phẩm *</label>
               <div class="relative">
-                <i class="fa-solid fa-box absolute left-4 top-3.5 text-gray-400 text-sm"></i>
-                <select id="order-product" class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none transition text-sm text-gray-800 bg-white">
-                  <option value="Combo 2 Bịch 1Kg Loại Trung (23-27mm) - 240.000đ" selected>Combo 2 Bịch 1Kg Loại Trung (23-27mm) - 240.000đ (Bán chạy nhất)</option>
-                  <option value="Macca Loại Trung (23-27mm) - 1 Bịch 500g - 125.000đ">Macca Loại Trung (23-27mm) - 1 Bịch 500g - 125.000đ</option>
-                  <option value="Macca Size Lớn (>27mm) - 270.000đ/1kg">Macca Size Lớn (>27mm) - 270.000đ/1kg</option>
-                  <option value="Đơn Hàng Từ 5kg (Miễn Phí Vận Chuyển Toàn Quốc)">Đơn Hàng Từ 5kg (Miễn Phí Vận Chuyển Toàn Quốc)</option>
-                  <option value="Đặt Số Lượng Lớn / Sỉ (Liên hệ báo giá vườn tốt nhất)">Đặt Số Lượng Lớn / Sỉ (Liên hệ báo giá vườn tốt nhất)</option>
+                <i class="fa-solid fa-box-open absolute left-4 top-3.5 text-forest text-sm"></i>
+                <select id="order-product" onchange="updateFormEstimate()" class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none transition text-sm font-semibold text-gray-800 bg-white">
+                  <option value="Combo 2 Bịch 1Kg Loại Trung (23-27mm) - 240.000đ" data-price="240000" data-kg="1" selected>Combo 2 Bịch 1Kg Loại Trung (23-27mm) - 240.000đ (Bán chạy nhất)</option>
+                  <option value="Macca Loại Trung (23-27mm) - 1 Bịch 500g - 125.000đ" data-price="125000" data-kg="0.5">Macca Loại Trung (23-27mm) - 1 Bịch 500g - 125.000đ</option>
+                  <option value="Macca Size Lớn (>27mm) - 270.000đ/1kg" data-price="270000" data-kg="1">Macca Size Lớn (>27mm) - 270.000đ/1kg</option>
+                  <option value="Đơn Hàng Từ 5kg (Miễn Phí Vận Chuyển Toàn Quốc)" data-price="1200000" data-kg="5">Đơn Hàng Từ 5kg (Miễn Phí Vận Chuyển Toàn Quốc)</option>
+                  <option value="Đặt Số Lượng Lớn / Sỉ (Liên hệ báo giá vườn tốt nhất)" data-price="0" data-kg="5">Đặt Số Lượng Lớn / Sỉ (Liên hệ báo giá vườn tốt nhất)</option>
                 </select>
               </div>
             </div>
@@ -1053,92 +1425,125 @@
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div class="sm:col-span-1">
                 <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Số lượng</label>
-                <div class="relative">
-                  <i class="fa-solid fa-hashtag absolute left-4 top-3.5 text-gray-400 text-sm"></i>
-                  <input type="number" id="order-qty" min="1" value="1" 
-                         class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none transition text-sm text-gray-800" />
+                <div class="flex items-center border border-gray-200 rounded-xl overflow-hidden bg-white">
+                  <button type="button" onclick="StepFormQty(-1)" class="px-3.5 py-3 text-gray-600 hover:bg-gray-100 font-bold">-</button>
+                  <input type="number" id="order-qty" min="1" value="1" oninput="updateFormEstimate()"
+                         class="w-full py-3 text-center font-bold text-sm text-gray-800 outline-none" />
+                  <button type="button" onclick="StepFormQty(1)" class="px-3.5 py-3 text-gray-600 hover:bg-gray-100 font-bold">+</button>
                 </div>
               </div>
               <div class="sm:col-span-2">
-                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Địa chỉ giao hàng (Tùy chọn)</label>
+                <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Địa chỉ nhận hàng (Tùy chọn)</label>
                 <div class="relative">
                   <i class="fa-solid fa-location-dot absolute left-4 top-3.5 text-gray-400 text-sm"></i>
-                  <input type="text" id="order-address" placeholder="Số nhà, tên đường, quận/huyện, tỉnh thành..." 
-                         class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none transition text-sm text-gray-800" />
+                  <input type="text" id="order-address" placeholder="Số nhà, đường, phường/xã, quận/huyện, tỉnh..." 
+                         class="w-full pl-11 pr-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none transition text-sm text-gray-800 bg-cream/40" />
                 </div>
               </div>
+            </div>
+
+            <!-- Live Price & Freeship 5kg Estimator Box -->
+            <div class="bg-forest-tint p-4 rounded-2xl border border-forest/20 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+              <div>
+                <span class="text-xs text-gray-600 font-medium">Tổng tiền tạm tính:</span>
+                <span id="form-estimate-price" class="text-xl font-black text-forest ml-2">240.000đ</span>
+              </div>
+              <span id="form-freeship-badge" class="text-xs font-bold text-macca bg-macca-soft px-3 py-1 rounded-full">
+                🚚 Miễn phí vận chuyển khi đủ từ 5kg
+              </span>
             </div>
 
             <div>
               <label class="block text-xs font-bold text-gray-700 uppercase tracking-wider mb-2">Ghi chú thêm</label>
               <textarea id="order-note" rows="2" placeholder="Ví dụ: Giao giờ hành chính, gọi trước khi giao..." 
-                        class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none transition text-sm text-gray-800"></textarea>
+                        class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-forest focus:ring-2 focus:ring-forest/20 outline-none transition text-sm text-gray-800 bg-cream/40"></textarea>
             </div>
 
-            <!-- Submit Button Group -->
-            <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <!-- Submit Buttons -->
+            <div class="pt-2 grid grid-cols-1 sm:grid-cols-2 gap-3.5">
               <button type="submit" 
-                      class="w-full py-4 px-6 rounded-2xl bg-zalo hover:bg-zalo-hover text-white text-sm sm:text-base font-extrabold flex items-center justify-center gap-2 shadow-lg transition transform hover:-translate-y-0.5">
+                      class="btn-shine w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-zalo to-blue-600 hover:from-zalo-hover hover:to-blue-700 text-white text-sm sm:text-base font-extrabold flex items-center justify-center gap-2.5 shadow-lg shadow-blue-500/20 transition transform hover:-translate-y-0.5">
                 <i class="fa-solid fa-paper-plane"></i>
                 <span>GỬI ĐƠN QUA ZALO NGAY</span>
               </button>
               
               <a href="tel:0334475538" 
-                 class="w-full py-4 px-6 rounded-2xl bg-forest hover:bg-forest-light text-white text-sm sm:text-base font-extrabold flex items-center justify-center gap-2 shadow-lg transition transform hover:-translate-y-0.5">
+                 class="w-full py-4 px-6 rounded-2xl bg-forest hover:bg-forest-dark text-white text-sm sm:text-base font-extrabold flex items-center justify-center gap-2.5 shadow-lg transition transform hover:-translate-y-0.5">
                 <i class="fa-solid fa-phone-volume"></i>
-                <span>GỌI HOTLINE: 0334.475.538</span>
+                <span>GỌI TRỰC TIẾP: 0334.475.538</span>
               </a>
             </div>
-
-            <p class="text-center text-[11px] text-gray-500 pt-1">
-              <i class="fa-solid fa-shield-halved text-forest"></i> Thông tin đặt hàng của quý khách được bảo mật tuyệt đối.
-            </p>
 
           </form>
 
         </div>
 
-        <!-- Right: Brand Info & Story (5 Cols) -->
-        <div class="lg:col-span-5 space-y-6">
+        <!-- Right: Brand Story & Official Channels (5 Cols) -->
+        <div class="lg:col-span-5 space-y-6 reveal reveal-delay-1">
           
-          <div class="bg-forest-surface/80 rounded-3xl p-8 border border-forest/20 space-y-5">
-            <div class="w-12 h-12 rounded-2xl bg-forest text-white flex items-center justify-center text-2xl shadow-sm">
-              <i class="fa-solid fa-seedling text-amber-300"></i>
+          <div class="bg-white rounded-[2rem] p-8 border border-cream-border shadow-nature space-y-5 relative overflow-hidden">
+            <div class="w-12 h-12 rounded-2xl bg-forest text-amber-300 flex items-center justify-center text-2xl shadow-md">
+              <i class="fa-solid fa-seedling"></i>
             </div>
-            <h4 class="text-2xl font-extrabold text-forest">
+            <h4 class="font-serif text-2xl font-bold text-forest-deep">
               Nông Sản Sạch Lâm Đồng
             </h4>
-            <p class="text-sm text-gray-700 leading-relaxed">
-              Chúng tôi tự hào là đơn vị liên kết trực tiếp cùng các nhà vườn trồng macca lâu năm tại tỉnh Lâm Đồng. Cam kết cung cấp sản phẩm hạt macca thơm ngon, thuần khiết với giá gốc tận vườn, giữ trọn tinh hoa của đất rừng Tây Nguyên.
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Chúng tôi tự hào là đơn vị liên kết trực tiếp cùng các nhà vườn trồng macca lâu năm tại tỉnh Lâm Đồng. Cam kết cung cấp sản phẩm hạt macca sấy nhiệt thơm ngon, thuần khiết với giá gốc tận vườn, giữ trọn tinh hoa của đất rừng Tây Nguyên.
             </p>
 
-            <div class="space-y-3 pt-2 text-sm text-gray-800">
+            <div class="space-y-3.5 pt-3 border-t border-gray-100 text-sm text-gray-800">
               <div class="flex items-start gap-3">
-                <i class="fa-solid fa-location-dot text-forest mt-1 text-base"></i>
-                <span><strong>Vùng nguyên liệu:</strong> Lâm Đồng</span>
+                <div class="w-8 h-8 rounded-lg bg-forest-surface text-forest flex items-center justify-center flex-shrink-0">
+                  <i class="fa-solid fa-location-dot"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-gray-500 block">Vùng nguyên liệu</span>
+                  <span class="font-extrabold text-gray-900">Lâm Đồng</span>
+                </div>
               </div>
+
               <div class="flex items-start gap-3">
-                <i class="fa-solid fa-phone text-forest mt-1 text-base"></i>
-                <span><strong>Hotline / Zalo:</strong> <a href="tel:0334475538" class="font-bold text-forest hover:underline">0334 475 538</a></span>
+                <div class="w-8 h-8 rounded-lg bg-blue-50 text-zalo flex items-center justify-center flex-shrink-0">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-gray-500 block">Hotline / Zalo đặt hàng 24/7</span>
+                  <a href="tel:0334475538" class="font-extrabold text-zalo hover:underline text-base">0334 475 538</a>
+                </div>
               </div>
+
               <div class="flex items-start gap-3">
-                <i class="fa-solid fa-bag-shopping text-shopee mt-1 text-base"></i>
-                <span><strong>Gian hàng Shopee:</strong> <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" class="font-bold text-shopee hover:underline">shopee.vn/maccalamdong</a></span>
+                <div class="w-8 h-8 rounded-lg bg-orange-50 text-shopee flex items-center justify-center flex-shrink-0">
+                  <i class="fa-solid fa-bag-shopping"></i>
+                </div>
+                <div>
+                  <span class="text-xs text-gray-500 block">Gian hàng Shopee chính hãng</span>
+                  <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" rel="noopener noreferrer" class="font-extrabold text-shopee hover:underline">https://s.shopee.vn/9zyIH3495y</a>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Shopee Quick Banner Card -->
-          <div class="bg-gradient-to-r from-shopee to-orange-600 rounded-3xl p-6 text-white flex items-center justify-between shadow-nature">
-            <div>
-              <p class="text-xs uppercase font-extrabold text-orange-200">Kênh Thương Mại Điện Tử</p>
-              <h5 class="text-lg font-bold">Đặt Mua Tiện Lợi Trên Shopee</h5>
-              <p class="text-xs text-orange-100 mt-1">Áp dụng mã giảm giá & Freeship Extra toàn sàn</p>
+          <!-- Shopee Mall Promo Card -->
+          <div class="bg-gradient-to-br from-shopee to-orange-600 rounded-[2rem] p-7 text-white shadow-nature relative overflow-hidden">
+            <div class="absolute -right-6 -bottom-6 text-white/10 text-8xl pointer-events-none">
+              <i class="fa-solid fa-bag-shopping"></i>
             </div>
-            <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" rel="noopener noreferrer"
-               class="px-4 py-2.5 rounded-xl bg-white text-shopee font-bold text-xs hover:bg-orange-50 transition shadow whitespace-nowrap">
-              Vào Shopee <i class="fa-solid fa-arrow-right ml-1"></i>
-            </a>
+            <div class="relative z-10 space-y-4">
+              <span class="inline-block px-3 py-0.5 rounded-full bg-white/20 text-white text-[11px] font-bold uppercase tracking-wider">
+                Kênh Thương Mại Điện Tử
+              </span>
+              <h5 class="text-xl font-extrabold">Mua Sắm Tiện Lợi Trên Shopee</h5>
+              <p class="text-xs text-orange-100 leading-relaxed">
+                Đặt hàng trực tiếp qua gian hàng Shopee chính hãng để áp dụng thêm các mã giảm giá và ưu đãi vận chuyển từ sàn.
+              </p>
+              <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" rel="noopener noreferrer"
+                 class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white text-shopee font-extrabold text-xs hover:bg-orange-50 transition shadow-md">
+                <span>Mở Gian Hàng Shopee</span>
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+              </a>
+            </div>
           </div>
 
         </div>
@@ -1149,141 +1554,136 @@
   </section>
 
   <!-- ================= FOOTER ================= -->
-  <footer class="bg-forest-dark text-white pt-14 pb-24 lg:pb-12 border-t border-forest-light/30">
+  <footer class="bg-forest-deep text-white pt-14 pb-24 lg:pb-12 border-t border-white/10">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-12 border-b border-white/10">
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-10 pb-12 border-b border-white/10">
         
-        <!-- Col 1 -->
-        <div class="md:col-span-2 space-y-4">
+        <!-- Brand Column (5 Cols) -->
+        <div class="md:col-span-5 space-y-4">
           <div class="flex items-center gap-3">
             <div class="w-10 h-10 rounded-xl bg-forest flex items-center justify-center text-white">
               <i class="fa-solid fa-seedling text-amber-300 text-xl"></i>
             </div>
-            <span class="text-xl font-extrabold text-white">Macca Lâm Đồng</span>
+            <span class="font-serif text-2xl font-bold text-white">Macca Lâm Đồng</span>
           </div>
-          <p class="text-xs text-gray-300 max-w-md leading-relaxed">
-            Hạt macca sấy nhiệt thơm ngon cao cấp, giữ trọn vẹn hương vị béo ngậy thanh tao và nguồn dinh dưỡng vàng cho sức khỏe người Việt. Sản phẩm cam kết 100% tự nhiên không chất bảo quản.
+          <p class="text-xs sm:text-sm text-gray-300 max-w-md leading-relaxed">
+            Hạt macca sấy nhiệt thơm ngon cao cấp từ vùng nguyên liệu Lâm Đồng, giữ trọn vẹn hương vị béo ngậy thanh tao và nguồn dinh dưỡng vàng cho sức khỏe người Việt.
           </p>
-          <div class="flex items-center gap-3 pt-2">
-            <a href="https://zalo.me/0334475538" target="_blank" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-zalo flex items-center justify-center text-white transition">
-              <i class="fa-solid fa-comment-dots"></i>
+          <div class="flex items-center gap-3 pt-1">
+            <a href="https://zalo.me/0334475538" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-zalo text-xs font-bold flex items-center gap-2 transition">
+              <i class="fa-solid fa-comment-dots"></i> Zalo: 0334.475.538
             </a>
-            <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-shopee flex items-center justify-center text-white transition">
-              <i class="fa-solid fa-bag-shopping"></i>
-            </a>
-            <a href="tel:0334475538" class="w-9 h-9 rounded-lg bg-white/10 hover:bg-emerald-600 flex items-center justify-center text-white transition">
-              <i class="fa-solid fa-phone"></i>
+            <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" rel="noopener noreferrer" class="px-3.5 py-2 rounded-xl bg-white/10 hover:bg-shopee text-xs font-bold flex items-center gap-2 transition">
+              <i class="fa-solid fa-bag-shopping"></i> Shopee
             </a>
           </div>
         </div>
 
-        <!-- Col 2: Quick Links -->
-        <div class="space-y-3">
-          <h5 class="text-sm font-bold uppercase tracking-wider text-amber-300">Liên Kết Nhanh</h5>
-          <ul class="space-y-2 text-xs text-gray-300">
-            <li><a href="#hero" class="hover:text-white transition">Trang chủ</a></li>
-            <li><a href="#ve-san-pham" class="hover:text-white transition">Về sản phẩm</a></li>
-            <li><a href="#cong-dung" class="hover:text-white transition">Công dụng sức khỏe</a></li>
-            <li><a href="#bang-gia" class="hover:text-white transition">Bảng giá & Combo</a></li>
-            <li><a href="#danh-gia" class="hover:text-white transition">Đánh giá khách hàng</a></li>
+        <!-- Links Column (3 Cols) -->
+        <div class="md:col-span-3 space-y-3">
+          <h5 class="text-xs font-extrabold uppercase tracking-widest text-amber-300">Danh Mục Sản Phẩm</h5>
+          <ul class="space-y-2.5 text-xs text-gray-300">
+            <li><a href="#bang-gia" class="hover:text-amber-300 transition">• Loại trung (23-27mm) - 1 Bịch: 125.000đ</a></li>
+            <li><a href="#bang-gia" class="hover:text-amber-300 transition">• Combo 2 Bịch (1Kg) 23-27mm: 240.000đ</a></li>
+            <li><a href="#bang-gia" class="hover:text-amber-300 transition">• Macca Size Lớn (>27mm): 270.000đ/1kg</a></li>
+            <li><a href="#dat-hang" class="hover:text-amber-300 transition">• Đơn từ 5kg: Miễn phí vận chuyển</a></li>
           </ul>
         </div>
 
-        <!-- Col 3: Policy & Support -->
-        <div class="space-y-3">
-          <h5 class="text-sm font-bold uppercase tracking-wider text-amber-300">Chính Sách Bán Hàng</h5>
-          <ul class="space-y-2 text-xs text-gray-300">
-            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-300 text-[10px]"></i> Kiểm tra hàng trước khi nhận</li>
-            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-300 text-[10px]"></i> Đổi trả 1-1 miễn phí</li>
-            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-300 text-[10px]"></i> Freeship toàn quốc từ 5kg</li>
-            <li class="flex items-center gap-1.5"><i class="fa-solid fa-check text-amber-300 text-[10px]"></i> Hỗ trợ Zalo 24/7</li>
+        <!-- Policy Column (4 Cols) -->
+        <div class="md:col-span-4 space-y-3">
+          <h5 class="text-xs font-extrabold uppercase tracking-widest text-amber-300">Cam Kết & Chính Sách</h5>
+          <ul class="space-y-2.5 text-xs text-gray-300">
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-300"></i> Vùng nguyên liệu: Lâm Đồng</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-300"></i> Kiểm tra & ăn thử trước khi thanh toán</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-300"></i> Đổi trả 1-1 miễn phí nếu hạt hư/hôi dầu</li>
+            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-amber-300"></i> Freeship toàn quốc cho đơn từ 5kg</li>
           </ul>
         </div>
 
       </div>
 
-      <!-- Copyright -->
-      <div class="pt-8 text-center text-xs text-gray-400">
-        <p>© 2026 Macca Lâm Đồng. Tinh Hoa Nông Sản Tây Nguyên. Hotline: 0334 475 538</p>
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-gray-400">
+        <p>© 2026 Macca Lâm Đồng. Tinh Hoa Nông Sản Tây Nguyên.</p>
+        <p>Hotline / Zalo hỗ trợ: <strong class="text-white">0334 475 538</strong></p>
       </div>
     </div>
   </footer>
 
   <!-- ================= 8. FLOATING ACTION BUTTONS (GÓC DƯỚI BÊN PHẢI) ================= -->
-  <div class="fixed bottom-6 right-4 sm:right-6 z-50 flex flex-col items-end gap-3 pointer-events-none">
+  <div class="fixed bottom-5 right-4 sm:right-6 z-40 flex flex-col items-end gap-3 pointer-events-none">
     
     <!-- Zalo Floating Button -->
     <a href="https://zalo.me/0334475538" target="_blank" rel="noopener noreferrer" 
        title="Nhắn Zalo: 0334475538"
        class="pointer-events-auto group relative flex items-center justify-center w-14 h-14 rounded-full bg-zalo text-white shadow-floating hover:shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95 radar-ping">
-      <!-- Tooltip -->
-      <span class="absolute right-16 bg-gray-900/90 backdrop-blur text-white text-xs font-bold py-1.5 px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-md">
-        Nhắn Zalo: 0334 475 538
+      <span class="absolute right-16 bg-gray-900/95 text-white text-xs font-bold py-1.5 px-3.5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-lg">
+        Chat Zalo: 0334 475 538
       </span>
-      <i class="fa-solid fa-comment-dots text-2xl group-hover:scale-110 transition-transform"></i>
+      <i class="fa-solid fa-comment-dots text-2xl"></i>
     </a>
 
     <!-- Shopee Floating Button -->
     <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" rel="noopener noreferrer"
        title="Mua trên Shopee"
        class="pointer-events-auto group relative flex items-center justify-center w-14 h-14 rounded-full bg-shopee text-white shadow-floating hover:shadow-2xl transition-all duration-300 transform hover:scale-110 active:scale-95">
-      <!-- Tooltip -->
-      <span class="absolute right-16 bg-gray-900/90 backdrop-blur text-white text-xs font-bold py-1.5 px-3 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-md">
-        Gian hàng Shopee Chính Hãng
+      <span class="absolute right-16 bg-gray-900/95 text-white text-xs font-bold py-1.5 px-3.5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity duration-200 whitespace-nowrap pointer-events-none shadow-lg">
+        Mua trên Shopee Chính Hãng
       </span>
-      <i class="fa-solid fa-bag-shopping text-2xl group-hover:scale-110 transition-transform"></i>
+      <i class="fa-solid fa-bag-shopping text-2xl"></i>
     </a>
 
-    <!-- Phone Call Floating Button with visible pill -->
+    <!-- Phone Call Floating Pill -->
     <a href="tel:0334475538"
-       title="Gọi ngay: 0334475538"
-       class="pointer-events-auto group flex items-center gap-2.5 bg-forest hover:bg-forest-light text-white pl-3.5 pr-4 py-2.5 rounded-full shadow-floating hover:shadow-2xl transition-all duration-300 transform hover:scale-105 active:scale-95">
-      <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center animate-bounce-subtle">
+       title="Gọi điện: 0334475538"
+       class="pointer-events-auto group flex items-center gap-2.5 bg-forest hover:bg-forest-dark text-white pl-3 pr-4 py-2.5 rounded-full shadow-floating border border-white/20 transition-all duration-300 transform hover:scale-105 active:scale-95">
+      <div class="w-8 h-8 rounded-full bg-amber-400 text-forest-deep flex items-center justify-center animate-bounce-subtle">
         <i class="fa-solid fa-phone text-sm"></i>
       </div>
-      <span class="font-extrabold text-xs sm:text-sm tracking-wide">0334.475.538</span>
+      <div class="text-left leading-tight">
+        <span class="block text-[9px] uppercase text-emerald-200 font-bold">Gọi Đặt Hàng</span>
+        <span class="font-extrabold text-xs sm:text-sm tracking-wide">0334.475.538</span>
+      </div>
     </a>
 
   </div>
 
-  <!-- ================= FAST ORDER POPUP MODAL ================= -->
-  <div id="order-modal" class="fixed inset-0 z-50 bg-black/60 backdrop-blur-sm hidden items-center justify-center p-4">
-    <div class="bg-white w-full max-w-lg rounded-3xl p-6 sm:p-8 shadow-2xl border border-cream-border relative transform transition-all duration-300 scale-95 opacity-0" id="order-modal-content">
+  <!-- ================= POPUP ĐẶT HÀNG NHANH QUA ZALO ================= -->
+  <div id="order-modal" class="fixed inset-0 z-50 bg-black/65 backdrop-blur-sm hidden items-center justify-center p-4">
+    <div class="bg-white w-full max-w-lg rounded-[2rem] p-6 sm:p-8 shadow-2xl border border-cream-border relative transform transition-all duration-300 scale-95 opacity-0" id="order-modal-content">
       
-      <!-- Close Button -->
-      <button onclick="closeOrderModal()" class="absolute top-5 right-5 w-8 h-8 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-500 flex items-center justify-center transition">
+      <button onclick="closeOrderModal()" aria-label="Đóng" class="absolute top-5 right-5 w-9 h-9 rounded-full bg-gray-100 hover:bg-gray-200 text-gray-600 flex items-center justify-center transition">
         <i class="fa-solid fa-xmark"></i>
       </button>
 
       <div class="space-y-4">
-        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-surface text-forest text-xs font-bold">
-          <i class="fa-solid fa-bolt"></i> Xác Nhận Đặt Hàng Qua Zalo
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-forest-surface text-forest text-xs font-extrabold">
+          <i class="fa-solid fa-bolt"></i> Đặt Hàng Nhanh Qua Zalo
         </div>
 
-        <h4 class="text-xl font-extrabold text-gray-900" id="modal-product-name">
+        <h4 class="font-serif text-2xl font-bold text-gray-900" id="modal-product-name">
           Tên sản phẩm
         </h4>
 
-        <div class="bg-cream-muted p-4 rounded-2xl flex items-center justify-between border border-cream-border">
+        <div class="bg-cream p-4 rounded-2xl flex items-center justify-between border border-cream-border">
           <div>
-            <span class="text-xs text-gray-500">Đơn giá ưu đãi:</span>
-            <p class="text-xl font-black text-forest" id="modal-product-price">0đ</p>
+            <span class="text-xs text-gray-500 font-medium">Tổng tạm tính:</span>
+            <p class="text-2xl font-black text-forest" id="modal-product-price">0đ</p>
           </div>
-          <!-- Quantity control in modal -->
-          <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-xl border border-gray-200">
-            <button type="button" onclick="adjustModalQty(-1)" class="w-7 h-7 flex items-center justify-center text-gray-600 font-bold hover:text-forest">-</button>
-            <span id="modal-qty" class="w-8 text-center font-bold text-sm">1</span>
-            <button type="button" onclick="adjustModalQty(1)" class="w-7 h-7 flex items-center justify-center text-gray-600 font-bold hover:text-forest">+</button>
+          <div class="flex items-center gap-2 bg-white px-3 py-1.5 rounded-xl border border-gray-200 shadow-sm">
+            <button type="button" onclick="adjustModalQty(-1)" class="w-7 h-7 flex items-center justify-center text-gray-700 font-bold hover:text-forest">-</button>
+            <span id="modal-qty" class="w-8 text-center font-extrabold text-sm">1</span>
+            <button type="button" onclick="adjustModalQty(1)" class="w-7 h-7 flex items-center justify-center text-gray-700 font-bold hover:text-forest">+</button>
           </div>
         </div>
 
-        <div class="space-y-3 pt-2">
+        <div class="space-y-3 pt-1">
           <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Tên của bạn *</label>
-            <input type="text" id="modal-customer-name" placeholder="Ví dụ: Anh Tuấn" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:border-forest outline-none" />
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Họ tên của bạn *</label>
+            <input type="text" id="modal-customer-name" placeholder="Ví dụ: Chị Hương" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:border-forest outline-none" />
           </div>
           <div>
-            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Số điện thoại *</label>
+            <label class="block text-xs font-bold text-gray-700 uppercase mb-1">Số điện thoại liên hệ *</label>
             <input type="tel" id="modal-customer-phone" placeholder="Ví dụ: 0912 345 678" class="w-full px-4 py-2.5 rounded-xl border border-gray-200 text-sm focus:border-forest outline-none" />
           </div>
           <div>
@@ -1292,32 +1692,42 @@
           </div>
         </div>
 
-        <div class="pt-3 space-y-2">
+        <div class="pt-3 space-y-2.5">
           <button onclick="confirmModalZaloOrder()" 
-                  class="w-full py-3.5 rounded-xl bg-zalo hover:bg-zalo-hover text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg transition">
+                  class="btn-shine w-full py-3.5 rounded-xl bg-zalo hover:bg-zalo-hover text-white font-extrabold text-sm flex items-center justify-center gap-2 shadow-lg transition">
             <i class="fa-solid fa-comment-dots text-lg"></i>
             <span>Sao Chép Đơn & Mở Zalo (0334.475.538)</span>
           </button>
           
-          <a href="https://s.shopee.vn/9zyIH3495y" target="_blank"
+          <a href="https://s.shopee.vn/9zyIH3495y" target="_blank" rel="noopener noreferrer"
              class="w-full py-2.5 rounded-xl bg-shopee/10 text-shopee hover:bg-shopee hover:text-white font-bold text-xs flex items-center justify-center gap-2 transition">
             <i class="fa-solid fa-bag-shopping"></i>
-            <span>Hoặc Mua Trên Shopee Chính Hãng</span>
+            <span>Hoặc Đặt Mua Trên Shopee Chính Hãng</span>
           </a>
         </div>
-
       </div>
 
+    </div>
+  </div>
+
+  <!-- ================= LIGHTBOX XEM ẢNH PHÓNG TO ================= -->
+  <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/85 backdrop-blur-md hidden items-center justify-center p-4" onclick="closeLightbox()">
+    <div class="relative max-w-3xl w-full" onclick="event.stopPropagation()">
+      <button onclick="closeLightbox()" class="absolute -top-12 right-0 text-white hover:text-amber-300 text-2xl">
+        <i class="fa-solid fa-xmark"></i> Đóng
+      </button>
+      <img id="lightbox-img" src="1.jpg" alt="Phóng to ảnh sản phẩm" class="w-full max-h-[80vh] object-contain rounded-2xl shadow-2xl border border-white/20 bg-black" />
+      <p id="lightbox-caption" class="text-center text-white font-bold text-sm mt-3"></p>
     </div>
   </div>
 
   <!-- Toast Notification -->
   <div id="toast" class="fixed top-6 left-1/2 -translate-x-1/2 z-50 bg-gray-900/95 text-white px-5 py-3 rounded-2xl shadow-floating text-xs sm:text-sm font-semibold flex items-center gap-2.5 transition-all duration-300 opacity-0 pointer-events-none translate-y-[-20px]">
     <i class="fa-solid fa-circle-check text-emerald-400 text-base"></i>
-    <span id="toast-message">Nội dung thông báo</span>
+    <span id="toast-message">Thông báo</span>
   </div>
 
-  <!-- ================= JAVASCRIPT LOGIC ================= -->
+  <!-- ================= JAVASCRIPT ================= -->
   <script>
     // Mobile Menu Toggle
     const mobileBtn = document.getElementById('mobile-menu-btn');
@@ -1325,29 +1735,108 @@
     mobileBtn.addEventListener('click', () => {
       mobileMenu.classList.toggle('hidden');
     });
-
-    // Close mobile menu on link click
     mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
+      link.addEventListener('click', () => mobileMenu.classList.add('hidden'));
     });
 
-    // Toast Function
+    // Hero Image Switcher
+    function switchHeroImage(src, caption, btnEl) {
+      const mainImg = document.getElementById('hero-main-img');
+      const capEl = document.getElementById('hero-img-caption');
+      mainImg.style.opacity = '0.3';
+      setTimeout(() => {
+        mainImg.src = src;
+        capEl.textContent = caption;
+        mainImg.style.opacity = '1';
+      }, 150);
+
+      document.querySelectorAll('.hero-thumb').forEach(el => {
+        el.classList.remove('border-forest', 'ring-2', 'ring-forest/30', 'opacity-100');
+        el.classList.add('border-transparent', 'opacity-75');
+      });
+      btnEl.classList.remove('border-transparent', 'opacity-75');
+      btnEl.classList.add('border-forest', 'ring-2', 'ring-forest/30', 'opacity-100');
+    }
+
+    // Lightbox Preview
+    function openLightbox(src, caption) {
+      const modal = document.getElementById('lightbox-modal');
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-caption').textContent = caption || '';
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+    }
+    function closeLightbox() {
+      const modal = document.getElementById('lightbox-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+    }
+
+    // FAQ Accordion
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      item.classList.toggle('open');
+    }
+
+    // Scroll Reveal Observer
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // Toast Notification
     function showToast(message) {
       const toast = document.getElementById('toast');
-      const toastMsg = document.getElementById('toast-message');
-      toastMsg.textContent = message;
+      document.getElementById('toast-message').textContent = message;
       toast.classList.remove('opacity-0', 'translate-y-[-20px]', 'pointer-events-none');
       toast.classList.add('opacity-100', 'translate-y-0');
-      
       setTimeout(() => {
         toast.classList.add('opacity-0', 'translate-y-[-20px]', 'pointer-events-none');
         toast.classList.remove('opacity-100', 'translate-y-0');
       }, 3500);
     }
 
-    // Modal State
+    // Quick Form Live Price Estimator
+    function StepFormQty(delta) {
+      const input = document.getElementById('order-qty');
+      const val = Math.max(1, (parseInt(input.value) || 1) + delta);
+      input.value = val;
+      updateFormEstimate();
+    }
+
+    function updateFormEstimate() {
+      const select = document.getElementById('order-product');
+      const opt = select.options[select.selectedIndex];
+      const unitPrice = parseInt(opt.getAttribute('data-price')) || 0;
+      const unitKg = parseFloat(opt.getAttribute('data-kg')) || 0;
+      const qty = Math.max(1, parseInt(document.getElementById('order-qty').value) || 1);
+      
+      const total = unitPrice * qty;
+      const totalKg = unitKg * qty;
+      const priceEl = document.getElementById('form-estimate-price');
+      const badgeEl = document.getElementById('form-freeship-badge');
+
+      if (unitPrice > 0) {
+        priceEl.textContent = new Intl.NumberFormat('vi-VN').format(total) + 'đ';
+      } else {
+        priceEl.textContent = 'Liên hệ báo giá sỉ';
+      }
+
+      if (totalKg >= 5) {
+        badgeEl.textContent = '🎉 Đơn hàng đủ điều kiện MIỄN PHÍ VẬN CHUYỂN!';
+        badgeEl.className = 'text-xs font-extrabold text-forest bg-forest-surface px-3 py-1 rounded-full';
+      } else {
+        badgeEl.textContent = `🚚 Miễn phí vận chuyển khi đủ từ 5kg (Hiện tại: ${totalKg}kg)`;
+        badgeEl.className = 'text-xs font-bold text-macca bg-macca-soft px-3 py-1 rounded-full';
+      }
+    }
+
+    // Order Modal Logic
     let currentProduct = '';
     let currentPrice = 0;
     let modalQuantity = 1;
@@ -1363,7 +1852,6 @@
 
       const modal = document.getElementById('order-modal');
       const content = document.getElementById('order-modal-content');
-      
       modal.classList.remove('hidden');
       modal.classList.add('flex');
       setTimeout(() => {
@@ -1375,7 +1863,6 @@
     function closeOrderModal() {
       const modal = document.getElementById('order-modal');
       const content = document.getElementById('order-modal-content');
-      
       content.classList.remove('scale-100', 'opacity-100');
       content.classList.add('scale-95', 'opacity-0');
       setTimeout(() => {
@@ -1397,49 +1884,43 @@
       const addr = document.getElementById('modal-customer-addr').value.trim() || 'Tư vấn qua Zalo';
       const total = new Intl.NumberFormat('vi-VN').format(currentPrice * modalQuantity);
 
-      const message = `Chào shop Macca Lâm Đồng, tôi muốn đặt mua:\n- Sản phẩm: ${currentProduct}\n- Số lượng: ${modalQuantity}\n- Tổng tiền tạm tính: ${total}đ\n- Họ tên: ${name}\n- SĐT: ${phone}\n- Địa chỉ: ${addr}\nNhờ shop kiểm tra và xác nhận đơn giúp tôi nhé!`;
+      const message = `Chào shop Macca Lâm Đồng, tôi muốn đặt mua:\n- Sản phẩm: ${currentProduct}\n- Số lượng: ${modalQuantity}\n- Tổng tạm tính: ${total}đ\n- Họ tên: ${name}\n- SĐT: ${phone}\n- Địa chỉ: ${addr}\nNhờ shop xác nhận đơn giúp tôi nhé!`;
 
-      // Copy to clipboard
       if (navigator.clipboard) {
-        navigator.clipboard.writeText(message).catch(err => console.log(err));
+        navigator.clipboard.writeText(message).catch(() => {});
       }
 
-      showToast('Đã sao chép nội dung đơn hàng! Đang mở Zalo...');
-      
+      showToast('Đã sao chép nội dung đơn hàng! Đang mở Zalo 0334 475 538...');
       setTimeout(() => {
         window.open('https://zalo.me/0334475538', '_blank');
         closeOrderModal();
-      }, 1000);
+      }, 900);
     }
 
-    // Quick Order Form Handler
+    // Quick Order Form Submit
     function handleQuickOrder(e) {
       e.preventDefault();
       const name = document.getElementById('order-name').value.trim();
       const phone = document.getElementById('order-phone').value.trim();
       const product = document.getElementById('order-product').value;
       const qty = document.getElementById('order-qty').value;
-      const address = document.getElementById('order-address').value.trim() || 'Tư vấn báo giá';
+      const address = document.getElementById('order-address').value.trim() || 'Tư vấn qua Zalo';
       const note = document.getElementById('order-note').value.trim();
 
-      const message = `Chào shop Macca Lâm Đồng, tôi gửi thông tin đặt hàng nhanh:\n- Khách hàng: ${name}\n- Số điện thoại: ${phone}\n- Sản phẩm: ${product}\n- Số lượng: ${qty}\n- Địa chỉ nhận hàng: ${address}${note ? '\n- Ghi chú: ' + note : ''}\nVui lòng liên hệ xác nhận đơn giúp tôi. Cảm ơn shop!`;
+      const message = `Chào shop Macca Lâm Đồng, tôi gửi thông tin đặt hàng:\n- Khách hàng: ${name}\n- Số điện thoại: ${phone}\n- Sản phẩm: ${product}\n- Số lượng: ${qty}\n- Địa chỉ nhận hàng: ${address}${note ? '\n- Ghi chú: ' + note : ''}\nVui lòng xác nhận đơn giúp tôi!`;
 
       if (navigator.clipboard) {
-        navigator.clipboard.writeText(message).catch(err => console.log(err));
+        navigator.clipboard.writeText(message).catch(() => {});
       }
 
-      showToast('Đã lưu thông tin đơn hàng! Đang kết nối Zalo 0334 475 538...');
-
+      showToast('Đã sao chép đơn hàng! Đang kết nối Zalo 0334 475 538...');
       setTimeout(() => {
         window.open('https://zalo.me/0334475538', '_blank');
-      }, 1200);
+      }, 1000);
     }
 
-    // Close modal when clicking outside
     document.getElementById('order-modal').addEventListener('click', (e) => {
-      if (e.target.id === 'order-modal') {
-        closeOrderModal();
-      }
+      if (e.target.id === 'order-modal') closeOrderModal();
     });
   </script>
 
